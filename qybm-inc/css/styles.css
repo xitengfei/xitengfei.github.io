@@ -1,0 +1,359 @@
+.container{max-width: 1080px;margin:0 auto;}
+.container-fluid{ width: 100%; }
+
+.header-box{background: #fff;height:114px;padding-top:20px;box-sizing: border-box;}
+.header .logo{vertical-align: middle;color:#333;font-weight: bold;font-family: 'BigYoung6a146f36716d9d';}
+.header .logo img{width:68px;height:68px;vertical-align: middle;}
+.header .logo span{font-size:30px;vertical-align: middle;}
+
+.header .logo-text{margin-top:20px;color:#666;margin-left:20px;font-weight: 200;font-family: 'BigYoung6a146f36716d9d';}
+.header .logo-text .title{font-size:18px;}
+.header .logo-text .sub-title{font-size:10px;}
+
+.header .contact{color: #666;font-size:14px;line-height: 20px;}
+
+.nav-box{background: #333;height:40px;line-height:40px;text-align: center;}
+.nav{display: inline-block;}
+.nav li{margin-left:60px;float:left;color: #ccc;}
+.nav li:first-child{margin-left:0px;}
+.nav li.current{color: #fff;}
+
+.banner img{width:100%;height:100%;}
+
+.intro{text-align: center;color:#333;margin-top:95px;}
+.intro .title{font-size: 32px;font-family: 'BigYoung6a146f36716d9d';}
+.intro .content{padding:0 20px;font-size:14px;margin-top:30px;text-align: left;line-height: 25px;}
+
+.counter{padding: 80px 0;}
+.counter ul{}
+.counter li{float: left;width: 24.9%;text-align: center;}
+.counter li h2{font-family: 'BigYoung6a146f36716d9d';line-height: 50px;
+    font-size: 22px;
+    margin-top: 10px;}
+.counter li h3{font-size: 14px;color: #999;}
+.counter .circle{display: inline-block; width:130px;height:130px;border-radius: 50%;border:5px solid red;}
+
+.tline{padding: 80px 0 180px;background:#F2F2F2}
+.tline .container{font-size:0;}
+.ppline{border-bottom:1px solid #ccc;height:105px;}
+.ppline ul li{
+	display: inline-block;
+	width:16.666%;height:105px;
+	font-size: 12px;
+	position: relative;
+}
+.ppline ul li > div{
+	position: absolute;
+	height:100%;
+	text-align: center;
+	width: 100%;
+}
+.ppline ul li > div h2{
+	font-size: 14px;
+    line-height: 22px;
+}
+.ppline ul li > div p{
+	font-size: 14px;
+    line-height: 22px;
+    padding-top: 10px;
+    color: #aaa;
+    white-space: nowrap;
+         width: 300px; 
+     margin-left: -61px; 
+}
+.ppline ul li .number{
+	width: 20px;
+    height: 20px;
+    background: #ccc;
+    display: block;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 10px;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    font-weight: bold;
+}
+.ppline ul li .number > i{
+	position: absolute;
+    width: 8px;
+    height: 8px;
+    border:5px solid #f2f2f2;
+    border-radius: 50px;
+    background: #aaa;
+}
+.ppline ul li:nth-child(2n) > div{ 
+	top:105px;
+	padding-top: 50px;
+	box-sizing: border-box;
+}
+.ppline ul li:nth-child(2n+1) > div .number{ 
+	bottom: 15px;
+}
+.ppline ul li:nth-child(2n) > div .number{ 
+	top: 15px;
+}
+.ppline ul li:nth-child(2n+1) > div .number i{ 
+	bottom: -24px;left: 2px;
+}
+.ppline ul li:nth-child(2n) > div .number i{ 
+	top: -23px;left:0;
+}
+
+
+
+.service{
+	padding: 35px 0 70px;
+}
+.service .section-main{ padding-top:30px; }
+.service ul{font-size: 0;}
+.service ul li{
+	width:25%;display: inline-block;font-size: 14px;text-align: center;
+	vertical-align: top;
+}	
+.service ul li > div{
+	background: #85ce45;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    line-height: 140px;
+    margin: 0 auto;
+}
+.service ul li > h3{
+	font-size: 18px;
+    line-height: 30px;
+    margin-top: 30px
+}
+.service ul li > p{
+	line-height: 20px;
+    font-size: 12px;
+    padding-top: 15px;
+    padding: 15px 40px;
+    text-align: left;
+}
+
+
+.cooperation{
+	padding: 35px 0 70px; background: #f2f2f2;
+}
+.cooperation .section-main{padding-top:30px;}
+.cooperation ul{font-size: 0;}
+.cooperation ul li{
+	width:20%;display: inline-block;font-size: 14px;text-align: center;
+	vertical-align: top;
+}	
+.cooperation ul li > div{
+	background: #fff;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    line-height: 140px;
+    margin: 0 auto;
+    border: 1px solid #d9d9d9;
+}
+.cooperation ul li > h3{
+	font-size: 16px;
+    line-height: 30px;
+    margin-top: 30px
+}
+.cooperation .section-header h2 .right{
+	width: 200px;
+}
+
+
+.promise{position: relative;}
+.promise .section-bg img{
+	width: 100%;height: auto;
+}
+.promise .content{
+	position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.promise .section-header{
+	position: absolute;
+    left: 50%;
+    top: 50px;
+    margin-left: -225px;
+}
+.promise .section-header h2{
+	width: 450px;
+}
+.promise .section-header h2 .left{
+	height: 120px;width: 120px;
+}
+.promise .section-header h2 .right{
+	color: #fff;
+    width: 310px;
+    padding-left: 20px;
+}
+.promise .section-header .right p:nth-child(2){
+	color: #ffd324;
+	font-size: 26px;
+    line-height: 26px;
+}
+.promise .section-header .right p:nth-child(3){
+	font-size: 26px;
+	line-height: 44px;
+}
+
+.field{padding-top:35px;}
+.field .section-header h2{width: 380px;}
+.field .section-header .right{width: 100%;}
+.field .section-header .right p:nth-child(2){
+	font-size: 22px;
+	line-height: 28px;
+}
+.field .section-header .right p:nth-child(3){
+	font-size: 22px;font-weight: bold;
+	line-height: 36px;
+	color: #ddd;
+}
+
+.app{position: relative;}
+.app .section-bg img{
+	width: 100%;height: auto;
+}
+.app .content{
+	position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+#app4 .circle .ringItem{
+	background: none;
+}
+
+.sbs{position:relative;background:#f8c71e;padding: 50px 0;}
+.sbs .bg-top{
+	background-image:url(../image/rollbg.png);
+	background-repeat: repeat-x;
+	width: 100%;
+    height: 35px;
+    position:absolute; top: -35px;
+}
+.sbs .content{
+	font-size: 24px;text-align: center;
+	width: 350px; margin: 0 auto;
+}
+.sbs .content > h2{
+	font-family: 'BigYoung6a146f36716d9d';
+    color: #333;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 40px;
+}
+.sbs .content > h3{
+	font-family: 'BigYoung6a146f36716d9d';
+    color: #fff;
+    font-size: 26px;
+    line-height: 30px;
+}
+.sbs .content > p{
+	text-align: right;
+    color: #888;
+}
+
+
+.cases{position: relative;}
+.cases .content{
+	position: absolute;overflow: hidden;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+ul.case-list{padding: 30px; text-align: center; margin-top: 20px;}
+.case-list li{    
+	display: inline-block; position: relative; cursor: pointer;
+    width: 70px; transition: all 0.2s ease-out; line-height: 90px;
+    margin: 0 8px;
+}
+.case-list li img{width: 100%;}
+.case-list li label{display: none;}
+.case-list li.active{ width: 90px;  }
+.case-list li.active label{ 
+	position: absolute;
+    bottom: -62px;
+    display: block;
+    font-size: 22px;
+    color: #fff;
+    font-size: 14px;
+    width: 100%;
+}
+
+
+.screens{}
+.screens .screen-left, 
+.screens .screen-main, 
+.screens .screen-right{
+	background: url(../image/iphone6-black.png);
+    width: 300px;
+    background-size: 100%;
+    height: 385px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    padding: 60px 15px 0;
+    box-sizing: border-box;
+}
+.screens .screen-left{
+	margin-left: -340px;bottom: -50px;
+}
+.screens .screen-main{
+    margin-left: -150px;
+    z-index: 2
+}
+.screens .screen-right{
+	margin-left: 40px;
+    bottom: -50px
+}
+.screens .screen-content{
+	width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 2px;
+}
+
+
+.contactus{
+	padding: 35px 0 25px;
+}
+
+.location{
+	background-color: #F6C81D;
+	padding: 35px 0;
+}
+.location .map-container{
+	width: 750px;
+    height: 400px;
+    margin: 0 auto;
+    border: 3px solid #FFE36F;
+    border-radius: 5px;
+}
+#baidumap{width:100%;height:400px;}
+
+footer{background: #2b291f;
+    padding: 30px;}
+footer .container{width: 750px; margin:0 auto;font-size:0;}
+footer .container > .logo{
+	width: 120px;
+    line-height: 120px;
+    display: inline-block;
+    vertical-align: top;
+}
+footer .container > .logo img{ width: 100%; }
+footer .container > ul.contact-info{
+	display: inline-block;
+    width: 630px;
+    font-size: 14px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+footer .container > ul.contact-info li{
+	line-height: 36px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ccc;
+}
