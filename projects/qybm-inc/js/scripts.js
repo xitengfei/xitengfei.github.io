@@ -135,9 +135,8 @@ function isScrolledIntoView2(elem){
     return elemTop < (docViewTop + $window.height()/2);
 }
 
+
 function runInViewPort(){
-	var xCounterRendered = false;
-	
 	$("body > div.app").each(function(){
 		var that = this;
 		if(isScrolledIntoView2(this)){
@@ -164,6 +163,8 @@ function runInViewPort(){
 }
 
 function events(){
+	xCounterRendered = false;
+	
 	runInViewPort();
 	$(window).scroll(function(){
 		runInViewPort();
