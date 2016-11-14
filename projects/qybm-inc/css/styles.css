@@ -33,16 +33,9 @@ body .main-content{ background: #f2f2f2; }
 .nav li.current a, .nav li a:hover{color: #333;}
 .nav li a{text-decoration: none; cursor: pointer;}
 
-.banner img{width:100%;height:100%;}
-/*.banner-content-container{
-    position: absolute;
-    top: 0;
-    color: #fff;
-    width: 100%;
-    height: 100%;
-}*/
+.main-content{position: relative;}
 .banner-content{
-    
+    position: absolute; width: 100%; height: 100%;top: 0;left: 0;
 }
 .banner-content #screen1, .banner-content #screen3{
     max-width: 960px;
@@ -54,19 +47,24 @@ body .main-content{ background: #f2f2f2; }
     -o-transform: translate(-50%,-50%);        /* Opera */
     -moz-transform: translate(-50%,-50%);
 }
+.banner-content #screen2{
+    height: 100%;width: 100%;
+    text-align: center;
+}
 .banner-content #screen2 .screen-warp{
-    max-width: 960px;
+    max-width: 900px;
     position: absolute;
-    top: 50%; left: 50%; margin-top: -250px; margin-left: -480px;
+    top: 50%; left: 50%; margin-top: -250px; margin-left: -430px;
 }
 .banner-content #screen2 .section3{
     left: 50%; margin-left: -502px;
 }
 
-.banner-content #screen1{ text-align: center;color: #fff; }
-.banner-content #screen1 h2{ font-size: 44px; font-weight: bold; margin-left: -80px; margin-top: 10px;}
-.banner-content #screen1 h3{ font-size: 44px;line-height: 40px; font-weight: normal; margin-left: 135px;}
-.banner-content #screen1 p{ font-size: 22px; font-weight: bold; margin-left: 135px;color:#ccc;}
+#screen1{ text-align: center;color: #fff; }
+#screen1 img{ width: 240px; }
+#screen1 h2{ font-size: 44px; font-weight: bold; margin-left: -80px; margin-top: 10px;}
+#screen1 h3{ font-size: 44px;line-height: 40px; font-weight: normal; margin-left: 135px;}
+#screen1 p{ font-size: 22px; font-weight: normal; margin-left: 135px;color:#ccc;}
 
 #screen2{height: 100%;}
 #screen2 .section1{color: #fff;}
@@ -75,12 +73,12 @@ body .main-content{ background: #f2f2f2; }
 #screen2 .section1 > p{ font-size: 28px; font-weight: normal; margin-left:200px;text-align: center;}
 
 #screen2 .section2{ padding: 80px 0 0;}
-#screen2 .section2 ul li{ color:#fff6e5; visibility: hidden; }
+#screen2 .section2 ul li{ color:#fff6e5;visibility: hidden;}
 #screen2 .section2 ul li div{width:65px;height:65px;line-height: 65px; background:#021a35;}
 #screen2 .section2 ul li div img{ max-width: 40px; }
 #screen2 .section2 ul li > h3{ margin-top: 20px; }
 #screen2 .section2 ul li > p{ padding: 15px 30px; }
-#screen2 .section3{ position: absolute; bottom: 50px; visibility: hidden;}
+#screen2 .section3{ position: absolute; bottom: 50px;visibility: hidden;}
 
 .banner-content #screen3{ width: 1000px; }
 .banner-content #screen3 .sleft{ 
@@ -103,7 +101,19 @@ body .main-content{ background: #f2f2f2; }
 .banner-content #screen3 .sright ul li img{ width: 100%; }
 
 
+@media screen and (max-width: 1500px){
+    #screen1 img{ width: 160px; }
+    #screen1 h2{ font-size: 30px; font-weight: bold;}
+    #screen1 h3{ font-size: 30px;line-height: 30px;}
+    #screen1 p{ font-size: 18px;}
 
+    #screen2 .section1 > h2{ font-size: 32px;}
+    #screen2 .section1 > h3{ font-size: 32px;line-height: 35px;}
+    #screen2 .section1 > p{ font-size: 18px; font-weight: normal;}
+}
+
+
+/** 关于我们 **/
 .intro{text-align: center;color:#333;padding-top:80px;}
 .intro .title{font-size: 32px;font-family: 'BigYoung6a146f36716d9d';}
 .intro .content{padding:0 20px;font-size:14px;margin-top:30px;text-align: left;line-height: 25px;}
@@ -252,7 +262,6 @@ body .main-content{ background: #f2f2f2; }
 .cooperation .section-header h2 .right{ width: 100%; }
 .cooperation .section-header h2 .right p:nth-child(2){ font-size: 24px; }
 
-
 .promise{background: #fff;}
 .promise .content{ padding-top: 65px; }
 .promise .content img.partner{
@@ -261,68 +270,41 @@ body .main-content{ background: #f2f2f2; }
 }
 
 
-.field{padding-top:35px;}
-.field .section-header h2{width: 380px;}
-.field .section-header .right{width: 100%;}
-.field .section-header .right p:nth-child(2){
-	font-size: 22px;
-	line-height: 28px;
-}
-.field .section-header .right p:nth-child(3){
-	font-size: 22px;font-weight: bold;
-	line-height: 36px;
-	color: #ddd;
-}
+/** 优势强项 **/
+.advantage .section1{
 
-.app{position: relative;}
-.app .section-bg img{ width: 100%;height: auto; }
-.app .content{
-    width: 500px; height: 500px;
-	position: absolute; top: 50%; left: 50%; margin-left: -250px; margin-top: -400px; 
 }
-#app4 .circle .ringItem{
-	background: none;
+.advantage .msection{ 
+    width: 100%;background: #f1f1f1; text-align: center;
+    padding: 60px 0 120px;box-sizing: border-box;
 }
-
-.sbs{position:relative;background:#f8c71e;padding: 50px 0;}
-.sbs .bg-top{
-	background-image:url(../image/rollbg.png);
-	background-repeat: repeat-x;
-	width: 100%;
+.advantage .msection img{ width: 40%; }
+.advantage .section3{ 
+    width: 100%;background: #fff;
+}
+.advantage .section4{ 
+    width: 100%;background: #f1f1f1;
+}
+.advantage .section5{ 
+    width: 100%;background: #fff; padding: 90px 0 140px;
+}
+.advantage .section6{position:relative;background:#f8c71e;padding: 100px 0;}
+.advantage .section6 .bg-top{
+    background-image:url(../image/rollbg.png);
+    background-repeat: repeat-x;
+    width: 100%;
     height: 35px;
     position:absolute; top: -35px;
 }
-.sbs .content{
-	font-size: 24px;text-align: center;
-	width: 350px; margin: 0 auto;
-}
-.sbs .content > h2{
-	font-family: 'BigYoung6a146f36716d9d';
-    color: #333;
-    font-size: 30px;
-    font-weight: bold;
-    line-height: 40px;
-}
-.sbs .content > h3{
-	font-family: 'BigYoung6a146f36716d9d';
-    color: #fff;
-    font-size: 26px;
-    line-height: 30px;
-}
-.sbs .content > p{
-	text-align: right;
-    color: #888;
-}
+.advantage .section6 img{width: 30%;}
 
 
+/** 案例介绍 **/
 .cases{
     position: relative;height:660px;
     background-image: url(../image/case-bg.png);
     background-size: cover; 
     overflow: hidden;
-}
-.cases .content{ 
-
 }
 ul.case-list{padding: 50px; text-align: center; margin-top: 20px;}
 .case-list li{    
@@ -343,8 +325,6 @@ ul.case-list{padding: 50px; text-align: center; margin-top: 20px;}
     width: 100%;
 }
 
-
-.screens{}
 .screens .screen-left, 
 .screens .screen-main, 
 .screens .screen-right{
@@ -377,6 +357,7 @@ ul.case-list{padding: 50px; text-align: center; margin-top: 20px;}
 }
 
 
+/** 联系我们 **/
 .location{ 
     background-color: #F6C81D; padding: 0 0 60px; 
     background: url(../image/contact/contactus-1.jpg);

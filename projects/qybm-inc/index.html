@@ -66,20 +66,19 @@
     <!-- content -->
     <div class="main-content">
         <div class="banner wholebg">
-            <img src="image/banner.png"  width="100%"  style="display: none;" />
             <div id="particles-js"></div>
         </div>
         <div class="banner-content">
             <div class="bscreen" id="screen1" style="display: none;">
-                <div class="screen-warp">
-                    <span><img src="image/index/human.png" width="240" style="width: 240px;" /></span>
+                <div class="screen-warp" style="display: none;">
+                    <span><img src="image/index/human.png" /></span>
                     <h2>众里寻他千百度</h2>
                     <h3>专业的伙伴</h3>
                     <p>Professional Service</p>
                 </div>
             </div>
 
-            <div class="bscreen" id="screen2" style="display: block;">
+            <div class="bscreen" id="screen2" style="display: none;">
                 <div class="screen-warp">
                     <div class="section1">
                         <h2>千秋大业一杯茶</h2>
@@ -177,48 +176,47 @@
         }else{
             run();
         }
-        
     }
 
     function animation1(){
         $("#screen1").show();$("#screen1").siblings().hide();
         var dom = $(".banner-content #screen1 .screen-warp");
-        dom.animateCss('bounceInDown', function(){
-            setTimeout(function(){
-                dom.animateCss('zoomOutDown', function(){
-                    animation2();
-                });
-            }, 3000);
-        });
+        dom.show().animateCss('bounceInDown');
+        setTimeout(function(){
+            dom.animateCss('fadeOut', function(e){
+                e.hide(); $("#screen1").hide();
+                animation2();
+            });
+        }, 3000);
     }
 
     function animation2(){
-        $("#screen2").show();$("#screen2").siblings().hide();
-        
+        $("#screen2").show();
+
         var dom1 = $("#screen2 .section1");
         dom1.animateCss('bounceInDown');
 
         mqueue($("#screen2 .section2 ul li"), 'zoomIn', 400, function(){
             var dom3 = $("#screen2 .section3");
-            dom3.css('visibility','visible').animateCss("bounceInUp", function(){
-                setTimeout(function(){
-                    $("#screen2 .section1,#screen2 .section2,#screen2 .section3").animateCss("fadeOutRight", function(){
-                        animation3();
-                    });
-                },3000);
-            });
+            dom3.css('visibility','visible').animateCss("bounceInUp");
+            setTimeout(function(){
+                $("#screen2 .screen-warp, #screen2 .section3").animateCss("fadeOutRight", function(){
+                    $("#screen2").hide();
+                    animation3();
+                });
+            },3000);
         }, 1000);
     }
 
 
     function animation3(){
-        $("#screen3").show();$("#screen3").siblings().hide();
+        $("#screen3").show();
 
         var dom1 = $("#screen3 .sleft img");
         dom1.animateCss('zoomInLeft');
 
         mqueue($("#screen3 ul li"), 'bounceInDown', 400, function(){
-
+            // $("#screen3").hide();
         }, 1000);
     }
 
