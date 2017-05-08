@@ -53,7 +53,7 @@ watchScene(function(scene,lastScene){
 		
 		$el = $scene.find('.HYPE_element:eq(1)');
 		$el.addClass('msg-board').empty();
-		$input = $('<textarea name="msg">我有个愿望dream。</textarea><p style="display:none;" class="tips"></p>');
+		$input = $('<textarea name="msg">我有一个心愿。</textarea><p style="display:none;" class="tips"></p>');
 		$el.append($input);
 		$input.keyup(function(){
 			var v = $(this).val();
