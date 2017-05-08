@@ -15,6 +15,28 @@ body > .shareImg{position: absolute;z-index: -1;opacity: 0 !important; }
     border-radius: 6px;
 }
 .enter-layer.hide{ display: none; }
+.loadingendtip{
+    position: absolute;
+    top: 406px;
+    left: 0;
+    z-index: 12;
+    padding-top: 20px !important;
+    text-align: center !important;
+}
+.loadingendtip:before{
+    content: '';
+    width: 84%;
+    left: 8%;
+    top: 0;
+    position: absolute;
+    height: 101px;
+    display: none;
+    z-index: -1;
+    background: yellow;
+}
+.loadingendtip img{
+    width:90%;
+}
 
 
 /* scene 2 */
@@ -72,4 +94,22 @@ body > .shareImg{position: absolute;z-index: -1;opacity: 0 !important; }
     transform: translateX(0px) translateY(539px) rotateY(0deg);
     width: 414px;
     height: 130px;
+}
+
+
+#musicPlayBtn{
+    width: 55px;
+    height: 55px;
+    z-index: 999;
+    position: absolute;
+    top: 15px;
+    left: 82%;
+}
+#musicPlayBtn.play{
+    background: url('../img/closemusic.png');
+    background-size: cover;
+}
+#musicPlayBtn.pause{
+    background: url('../img/music.png');
+    background-size: cover;
 }

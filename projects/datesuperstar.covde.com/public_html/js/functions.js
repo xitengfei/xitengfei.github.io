@@ -12,11 +12,11 @@ window.shareTitles = [
 ];
 window.liuyanScenes = ['5','6','7','8','9'];
 window.starIcons = {
-	'scene5':'img/luhan02.jpg',
-	'scene6':'img/qiaoxin03.jpg',
-	'scene7':'img/yangyandong04.jpg',
-	'scene8':'img/lichen01.jpg',
-	'scene9':'img/yingcaier05.jpg'
+	'scene5':'http://datesuperstar.covde.com/img/luhan02.jpg',
+	'scene6':'http://datesuperstar.covde.com/img/qiaoxin03.jpg',
+	'scene7':'http://datesuperstar.covde.com/img/yangyandong04.jpg',
+	'scene8':'http://datesuperstar.covde.com/img/lichen01.jpg',
+	'scene9':'http://datesuperstar.covde.com/img/yingcaier05.jpg'
 };
 
 window.currentScene = {
@@ -39,7 +39,10 @@ function watchScene(callback){
 			if($dom.attr('aria-hidden') !== 'true'){
 				var hype_scene_index = $dom.attr('hype_scene_index');
 				if(hype_scene_index != currentScene.scene_index){
-					var lastScene = currentScene.scene_index;
+					var lastScene = {
+						scene_index:currentScene.scene_index,
+						id:currentScene.id
+					};
 					currentScene.scene_index = hype_scene_index;
 					currentScene.id = $dom.attr('id');
 					callback(currentScene, lastScene);
@@ -72,4 +75,23 @@ function getRandomNum(Min,Max){
 	var Range = Max - Min; 
 	var Rand = Math.random();   
 	return(Min + Math.round(Rand * Range));   
-} 
+}
+
+
+window.isIos = function(){
+    var u = navigator.userAgent;
+    var ret = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    return ret;
+};
+
+function musicPlay(){
+	audio1.play();
+	window.playing = true;
+	$("#musicPlayBtn").attr('class', 'pause');
+}
+
+function musicStop(){
+	audio1.pause();
+	window.playing = false;
+	$("#musicPlayBtn").attr('class', 'play');
+}

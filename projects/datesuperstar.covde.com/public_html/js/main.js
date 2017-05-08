@@ -1,33 +1,44 @@
 function shareConfig(){
 	var randomIndex = getRandomNum(0, 9);
 	var title = shareTitles[randomIndex];
-	// var img = 'http://file.youboy.com/d/151/55/37/5/610915.jpg';
+	
 	var img = starIcons['scene'+currentScene.scene_index];
-
-	console.log(img);
 
 	$('title').text(title);
 	$('body').children('.shareImg').attr('src', img);
 	$("meta[name='sharecontent']").attr('data-msg-img', img);
 	$("meta[name='sharecontent']").attr('data-msg-title',title);
+	$("meta[name='sharecontent']").attr('data-msg-content',title);
 
 	wx.onMenuShareTimeline({
-	    title: title, // 分享标题
-	    link: '', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-	    imgUrl: img, // 分享图标
-	    success: function () { 
-	        // 用户确认分享后执行的回调函数
-	    },
-	    cancel: function () { 
-	        // 用户取消分享后执行的回调函数
-	    }
+	    title: title,
+	    link: document.URL,
+	    imgUrl: img
+	});
+
+    wx.onMenuShareAppMessage({
+	    title: title,
+	    desc: '快来许愿吧！',
+	    link: document.URL,
+	    imgUrl: img
 	});
 }
 
-window.message = null;
 window.msgSubmitted = false;
-window.submitMsg = function(){
-	console.log('ajax submit msg:', message);
+window.submitMsg = function(scene){
+	var apiUrl = 'http://datesuperstar.covde.com/comment/saveComment';
+	var msg = $('#'+scene.id).find('textarea').val();
+	console.log('submit msg:', msg);
+	$.ajax({
+        url : apiUrl,
+        data : { region:'', comment:msg },
+        dataType : 'JSON',
+        type : 'POST',
+        async : true,
+        success : function(data){
+            console.log('submited succesfull', data);
+        }
+    });
 }
 
 // watch scene change
@@ -40,12 +51,16 @@ watchScene(function(scene,lastScene){
 		renderApp();
 
 		progressSlider($loadingbox, function(){
+			$('#'+currentScene.id).find('.loadingbox').hide();
+			$('#'+currentScene.id).find('.loadingbox').next('p').show();
+
 			$('#'+currentScene.id).find('.enter-layer').removeClass('hide');
 		});
 	}
 
-	if(currentScene.scene_index == "4"){
-
+	if(currentScene.scene_index == "1"){
+		musicPlay();
+		$("#musicPlayBtn").show();
 	}
 
 	if(liuyanScenes.indexOf(currentScene.scene_index) >= 0){
@@ -57,7 +72,6 @@ watchScene(function(scene,lastScene){
 		$el.append($input);
 		$input.keyup(function(){
 			var v = $(this).val();
-			window.message = v;
 			if(v.length < 5 || v.length > 300){
 				$(this).next('p').text('Tips：许愿文字不得超过300字，不得小于5个字哦').show();
 				$(this).parents('.HYPE_scene').find('.submit-btn2').show();
@@ -80,7 +94,7 @@ watchScene(function(scene,lastScene){
 
 	if(currentScene.scene_index > 9){
 		if(!msgSubmitted){
-			submitMsg();
+			submitMsg(lastScene);
 			msgSubmitted = true;
 		}
 	}
@@ -88,12 +102,14 @@ watchScene(function(scene,lastScene){
 
 
 function scene0(){
+	var loadoverText = '《约吧大明星》第二季 <br> 5月11日起每周四晚8点撩心上线';
 	var $scene = $(".HYPE_scene[hype_scene_index='0']");
 	var $layer = $scene.children('div:eq(2)');
 	$html ='<div class="loadingbox"> \
 				<div class="percent"><i>1</i>%</div> \
 				<div class="progress"><div class="progressbar"><span class="progressbar-fill"></span></div></div>	\
 			</div>';
+	$html += '<p class="loadingendtip" style="display:none"><img src="img/intobuttonword.png"></p>';
 	$layer.append($html);
 
 	$scene.children('div:eq(3)').addClass('enter-layer hide');
@@ -130,6 +146,13 @@ function renderApp(){
 }
 
 function documentReady(){
-	console.log($('.HYPE_scene').length);
 	scene0();
+	$("body").append('<div id="musicPlayBtn" class="play" style="display:none;"></div>');
+	$("#musicPlayBtn").click(function(){
+		if(window.playing){
+			musicStop();
+		}else{
+			musicPlay();
+		}
+	});
 }
