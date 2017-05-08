@@ -1,8 +1,3 @@
-<?php
-	require_once 'lib/weixin.php';
-
-?>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,10 +10,13 @@
 	<script type="text/javascript" src="./js/main.js"></script>
 	<link rel="stylesheet" type="text/css" href="./css/fonts/fonts.css">
 	<link rel="stylesheet" type="text/css" href="./css/main.css">
-	<meta name="sharecontent" data-msg-img="" data-msg-title="" data-msg-content=""/>
+	<meta name="sharecontent" data-msg-img="./img/logo.png" data-msg-title="" data-msg-content=""/>
+	<div id='wx_pic' style='margin:0 auto;display:none;'>
+		<img src='./img/logo.png' />
+	</div>
 	<script type="text/javascript">
 	wx.config({
-	    debug: true, // 开启调试模式
+	    debug: false, // 开启调试模式
 	    appId: 'wx5b257b94167e1ffc', // 必填，公众号的唯一标识
 	    timestamp: '', // 必填，生成签名的时间戳
 	    nonceStr: '', // 必填，生成签名的随机串
@@ -50,7 +48,7 @@
   </head>
   <body>
 	<!-- copy these lines to your document: -->
-	<img src="http://xitengfei.github.io/static/logo.png" class="shareImg"/>
+	<img src="./img/logo.png" class="shareImg"/>
 
 	<div id="hype_container" style="margin:auto;position:relative;width:100%;height:100%;overflow:hidden;">
 		<script type="text/javascript" charset="utf-8" src="hyperesources/hype_generated_script.js?63223"></script>
