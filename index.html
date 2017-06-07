@@ -68,6 +68,44 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-cookie" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/07/cookie/" class="article-date">
+  <time datetime="2017-06-07T06:25:03.000Z" itemprop="datePublished">2017-06-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/07/cookie/">Cookie 封装</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="cookie-封装"><a href="#cookie-封装" class="headerlink" title="cookie 封装"></a>cookie 封装</h5><figure class="highlight plain"><figcaption><span>[cookie] [lang: javascript]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">function createCookie(name,value,days) &#123;</div><div class="line">	if (days) &#123;</div><div class="line">		var date = new Date();</div><div class="line">		date.setTime(date.getTime()+(days*24*60*60*1000));</div><div class="line">		var expires = &quot;; expires=&quot;+date.toGMTString();</div><div class="line">	&#125;</div><div class="line">	else var expires = &quot;&quot;;</div><div class="line">	document.cookie = name+&quot;=&quot;+value+expires+&quot;; path=/&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function readCookie(name) &#123;</div><div class="line">	var nameEQ = name + &quot;=&quot;;</div><div class="line">	var ca = document.cookie.split(&apos;;&apos;);</div><div class="line">	for(var i=0;i &lt; ca.length;i++) &#123;</div><div class="line">		var c = ca[i];</div><div class="line">		while (c.charAt(0)==&apos; &apos;) c = c.substring(1,c.length);</div><div class="line">		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);</div><div class="line">	&#125;</div><div class="line">	return null;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function eraseCookie(name) &#123;</div><div class="line">	createCookie(name,&quot;&quot;,-1);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>[orignal link] <a href="https://www.quirksmode.org/js/cookies.html" target="_blank" rel="external">https://www.quirksmode.org/js/cookies.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://xitengfei.github.io/2017/06/07/cookie/" data-id="cj3mm2gqv0000pumcc9q1k1fj" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-gulp-tutorial" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/06/02/gulp-tutorial/" class="article-date">
@@ -123,7 +161,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://xitengfei.github.io/2017/06/02/gulp-tutorial/" data-id="cj3f9d0ro0000ypmctmyrv9dd" class="article-share-link">Share</a>
+      <a data-url="http://xitengfei.github.io/2017/06/02/gulp-tutorial/" data-id="cj3mm2gt60001pumcdpsicrj1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -160,7 +198,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://xitengfei.github.io/2017/06/01/sass-tutorial/" data-id="cj3f9d0rz0002ypmcji7wcel3" class="article-share-link">Share</a>
+      <a data-url="http://xitengfei.github.io/2017/06/01/sass-tutorial/" data-id="cj3mm2gvv0003pumcv5jl5dbg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -205,7 +243,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://xitengfei.github.io/2017/06/01/hello-world/" data-id="cj3f9d0rv0001ypmcn7ajuoui" class="article-share-link">Share</a>
+      <a data-url="http://xitengfei.github.io/2017/06/01/hello-world/" data-id="cj3mm2gt80002pumc54lqt13y" class="article-share-link">Share</a>
       
       
     </footer>
@@ -243,6 +281,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/06/07/cookie/">Cookie 封装</a>
+          </li>
         
           <li>
             <a href="/2017/06/02/gulp-tutorial/">Gulp 入门与应用</a>

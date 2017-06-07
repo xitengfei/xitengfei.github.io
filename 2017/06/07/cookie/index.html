@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Sass 入门介绍 | Tengfei&#39;s Blog</title>
+  <title>Cookie 封装 | Tengfei&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="快速入门参考链接https://www.sass.hk/guide/">
+  <meta name="description" content="cookie 封装[cookie] [lang: javascript]123456789101112131415161718192021222324function createCookie(name,value,days) &amp;#123;	if (days) &amp;#123;		var date = new Date();		date.setTime(date.getTime()+(days*24*">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Sass 入门介绍">
-<meta property="og:url" content="http://xitengfei.github.io/2017/06/01/sass-tutorial/index.html">
+<meta property="og:title" content="Cookie 封装">
+<meta property="og:url" content="http://xitengfei.github.io/2017/06/07/cookie/index.html">
 <meta property="og:site_name" content="Tengfei&#39;s Blog">
-<meta property="og:description" content="快速入门参考链接https://www.sass.hk/guide/">
-<meta property="og:updated_time" content="2017-06-02T02:39:28.454Z">
+<meta property="og:description" content="cookie 封装[cookie] [lang: javascript]123456789101112131415161718192021222324function createCookie(name,value,days) &amp;#123;	if (days) &amp;#123;		var date = new Date();		date.setTime(date.getTime()+(days*24*">
+<meta property="og:updated_time" content="2017-06-07T06:29:07.758Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sass 入门介绍">
-<meta name="twitter:description" content="快速入门参考链接https://www.sass.hk/guide/">
+<meta name="twitter:title" content="Cookie 封装">
+<meta name="twitter:description" content="cookie 封装[cookie] [lang: javascript]123456789101112131415161718192021222324function createCookie(name,value,days) &amp;#123;	if (days) &amp;#123;		var date = new Date();		date.setTime(date.getTime()+(days*24*">
   
     <link rel="alternate" href="/atom.xml" title="Tengfei&#39;s Blog" type="application/atom+xml">
   
@@ -67,10 +67,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-sass-tutorial" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-cookie" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/01/sass-tutorial/" class="article-date">
-  <time datetime="2017-06-01T11:01:39.000Z" itemprop="datePublished">2017-06-01</time>
+    <a href="/2017/06/07/cookie/" class="article-date">
+  <time datetime="2017-06-07T06:25:03.000Z" itemprop="datePublished">2017-06-07</time>
 </a>
     
   </div>
@@ -81,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Sass 入门介绍
+      Cookie 封装
     </h1>
   
 
@@ -89,12 +89,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>快速入门参考链接<a href="https://www.sass.hk/guide/" target="_blank" rel="external">https://www.sass.hk/guide/</a></p>
+        <h5 id="cookie-封装"><a href="#cookie-封装" class="headerlink" title="cookie 封装"></a>cookie 封装</h5><figure class="highlight plain"><figcaption><span>[cookie] [lang: javascript]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">function createCookie(name,value,days) &#123;</div><div class="line">	if (days) &#123;</div><div class="line">		var date = new Date();</div><div class="line">		date.setTime(date.getTime()+(days*24*60*60*1000));</div><div class="line">		var expires = &quot;; expires=&quot;+date.toGMTString();</div><div class="line">	&#125;</div><div class="line">	else var expires = &quot;&quot;;</div><div class="line">	document.cookie = name+&quot;=&quot;+value+expires+&quot;; path=/&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function readCookie(name) &#123;</div><div class="line">	var nameEQ = name + &quot;=&quot;;</div><div class="line">	var ca = document.cookie.split(&apos;;&apos;);</div><div class="line">	for(var i=0;i &lt; ca.length;i++) &#123;</div><div class="line">		var c = ca[i];</div><div class="line">		while (c.charAt(0)==&apos; &apos;) c = c.substring(1,c.length);</div><div class="line">		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);</div><div class="line">	&#125;</div><div class="line">	return null;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function eraseCookie(name) &#123;</div><div class="line">	createCookie(name,&quot;&quot;,-1);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>[orignal link] <a href="https://www.quirksmode.org/js/cookies.html" target="_blank" rel="external">https://www.quirksmode.org/js/cookies.html</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://xitengfei.github.io/2017/06/01/sass-tutorial/" data-id="cj3mm2gvv0003pumcv5jl5dbg" class="article-share-link">Share</a>
+      <a data-url="http://xitengfei.github.io/2017/06/07/cookie/" data-id="cj3mm2gqv0000pumcc9q1k1fj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -103,19 +104,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/06/02/gulp-tutorial/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Gulp 入门与应用
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/06/01/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/06/02/gulp-tutorial/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">Gulp 入门与应用</div>
     </a>
   
 </nav>
