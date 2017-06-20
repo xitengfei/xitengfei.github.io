@@ -8,7 +8,7 @@
   <meta name="description" content="很久之前LZ就听说过长连接的说法，而且还知道HTTP1.0协议不支持长连接，从HTTP1.1协议以后，连接默认都是长连接。但LZ终究觉得对于长连接一直懵懵懂懂的，有种抓不到关键点的感觉。 　　今天LZ通过一番研究，终于明白了这其中的奥秘。而之前，LZ也看过长连接相关的内容，但一直都是云里雾里的。这次之所以能在这么短的时间里搞清楚，和LZ自己技术的沉淀密不可分。因此，这里LZ借着这个机会，再次强调一">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTTP协议中的短轮询、长轮询、长连接和短连接">
-<meta property="og:url" content="http://xitengfei.github.io/2017/06/20/post20170620-httpandtcp/index.html">
+<meta property="og:url" content="http://xitengfei.github.io/technology/post20170620-httpandtcp/index.html">
 <meta property="og:site_name" content="Tengfei&#39;s Blog">
 <meta property="og:description" content="很久之前LZ就听说过长连接的说法，而且还知道HTTP1.0协议不支持长连接，从HTTP1.1协议以后，连接默认都是长连接。但LZ终究觉得对于长连接一直懵懵懂懂的，有种抓不到关键点的感觉。 　　今天LZ通过一番研究，终于明白了这其中的奥秘。而之前，LZ也看过长连接相关的内容，但一直都是云里雾里的。这次之所以能在这么短的时间里搞清楚，和LZ自己技术的沉淀密不可分。因此，这里LZ借着这个机会，再次强调一">
 <meta property="og:updated_time" content="2017-06-20T07:43:47.795Z">
@@ -71,9 +71,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-post20170620-httpandtcp" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-technology/post20170620-httpandtcp" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/20/post20170620-httpandtcp/" class="article-date">
+    <a href="/technology/post20170620-httpandtcp/" class="article-date">
   <time datetime="2017-06-20T05:56:41.000Z" itemprop="datePublished">2017-06-20</time>
 </a>
     
@@ -154,7 +154,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://xitengfei.github.io/2017/06/20/post20170620-httpandtcp/" data-id="cj4594k1w00013imce320671b" class="article-share-link">Share</a>
+      <a data-url="http://xitengfei.github.io/technology/post20170620-httpandtcp/" data-id="cj45asw43000f8lmc1mw7oziy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -163,7 +163,7 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/06/20/post20170620-yulingling/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/poetry/post20170620-yulingling/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
@@ -173,9 +173,9 @@
     </a>
   
   
-    <a href="/2017/06/13/wordpress/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/technology/post20170620-wordpress-experience/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">wordpress</div>
+      <div class="article-nav-title">WordPress 开发心得</div>
     </a>
   
 </nav>
@@ -191,16 +191,30 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/诗词/">诗词</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/wordpress/">wordpress</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/诗词/">诗词</a></li></ul>
     </div>
   </div>
 
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/php-wordpress/">php wordpress</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/php-wordpress/" style="font-size: 10px;">php wordpress</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -219,23 +233,23 @@
       <ul>
         
           <li>
-            <a href="/2017/06/20/post20170620-yulingling/">雨霖铃·寒蝉凄切</a>
+            <a href="/poetry/post20170620-yulingling/">雨霖铃·寒蝉凄切</a>
           </li>
         
           <li>
-            <a href="/2017/06/20/post20170620-httpandtcp/">HTTP协议中的短轮询、长轮询、长连接和短连接</a>
+            <a href="/technology/post20170620-httpandtcp/">HTTP协议中的短轮询、长轮询、长连接和短连接</a>
           </li>
         
           <li>
-            <a href="/2017/06/13/wordpress/">wordpress</a>
+            <a href="/technology/post20170620-wordpress-experience/">WordPress 开发心得</a>
           </li>
         
           <li>
-            <a href="/2017/06/07/cookie/">Cookie 封装</a>
+            <a href="/cookie/">Cookie 封装</a>
           </li>
         
           <li>
-            <a href="/2017/06/02/gulp-tutorial/">Gulp 入门与应用</a>
+            <a href="/gulp-tutorial/">Gulp 入门与应用</a>
           </li>
         
       </ul>
