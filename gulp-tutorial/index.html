@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Gulp 入门与应用 | Tengfei&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Why Gulp?gulp是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器；它不仅能对网站资源进行优化，而且在开发过程中很多重复的任务能够使用正确的工具自动完成；使用它，我们不仅可以很愉快的编写代码，而且大大提高我们的工作效率 举一个栗子: 前端开发中，一个网站有二十几个的页面，因此也有很多的css和js,　如果不用gulp，你会怎么做，如果从代码方便维护的角度出发你应该把文件放在多">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gulp 入门与应用">
+<meta property="og:url" content="http://xitengfei.github.io/gulp-tutorial/index.html">
+<meta property="og:site_name" content="Tengfei&#39;s Blog">
+<meta property="og:description" content="Why Gulp?gulp是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器；它不仅能对网站资源进行优化，而且在开发过程中很多重复的任务能够使用正确的工具自动完成；使用它，我们不仅可以很愉快的编写代码，而且大大提高我们的工作效率 举一个栗子: 前端开发中，一个网站有二十几个的页面，因此也有很多的css和js,　如果不用gulp，你会怎么做，如果从代码方便维护的角度出发你应该把文件放在多">
+<meta property="og:image" content="http://xitengfei.github.io/images/gulp-tutorial/package.json.jpg">
+<meta property="og:image" content="http://xitengfei.github.io/images/gulp-tutorial/gulp-structure.png">
+<meta property="og:updated_time" content="2017-06-02T07:29:47.391Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Gulp 入门与应用">
+<meta name="twitter:description" content="Why Gulp?gulp是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器；它不仅能对网站资源进行优化，而且在开发过程中很多重复的任务能够使用正确的工具自动完成；使用它，我们不仅可以很愉快的编写代码，而且大大提高我们的工作效率 举一个栗子: 前端开发中，一个网站有二十几个的页面，因此也有很多的css和js,　如果不用gulp，你会怎么做，如果从代码方便维护的角度出发你应该把文件放在多">
+<meta name="twitter:image" content="http://xitengfei.github.io/images/gulp-tutorial/package.json.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Tengfei&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Tengfei&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">tengfei&#39;s techincal blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/categories/诗词/">诗词</a>
+        
+          <a class="main-nav-link" href="/categories/技术/">技术</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://xitengfei.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-gulp-tutorial" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/gulp-tutorial/" class="article-date">
+  <time datetime="2017-06-02T07:29:47.391Z" itemprop="datePublished">2017-06-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Gulp 入门与应用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br></p>
+<h3 id="Why-Gulp"><a href="#Why-Gulp" class="headerlink" title="Why Gulp?"></a>Why Gulp?</h3><p><em>gulp是前端开发过程中对代码进行构建的工具，是自动化项目的构建利器；它不仅能对网站资源进行优化，而且在开发过程中很多重复的任务能够使用正确的工具自动完成；使用它，我们不仅可以很愉快的编写代码，而且大大提高我们的工作效率</em></p>
+<p><strong>举一个栗子</strong>: 前端开发中，一个网站有二十几个的页面，因此也有很多的css和js,　如果不用gulp，你会怎么做，如果从代码方便维护的角度出发你应该把文件放在多个文件里，比如”header.css”,”global.css”,”index.css”,”mobile.css”, 但是从网站性能的角度出发，你可能应该把所有css放在一个文件里，所有js也最好放在一个文件里（因为请求数量的减少往往意味网站性能的提高)， 但这样代码的可维护性也就差了， 矛盾就这样产生了。 而在这里gulp正好就可以来解决这种问题: 你依然可以将代码放在多个文件里，然后通过gulp进行合并、压缩等处理，最终网页上还是只引用一个文件。 性能和代码的可维护性都兼顾了， 你的css和js代码可以分得更细致也没关系。</p>
+<p>当然，这只是gulp最常见的功能之一，他还能做很多其他的事情，比如对es6 javascript代码进行转码，使得常见的浏览器能够识别，它还可以用来做angularjs, vue, reactjs等前端框架的脚手架。</p>
+<p>可以说gulp在前端构建方面扮演着非常重要的角色，所以说它是前端构建工具的代表，其他常见的还有webpack, grunt等。</p>
+<hr>
+<h3 id="How-to-Start"><a href="#How-to-Start" class="headerlink" title="How to Start"></a>How to Start</h3><h5 id="开始的开始，安装nodejs和npm环境"><a href="#开始的开始，安装nodejs和npm环境" class="headerlink" title="开始的开始，安装nodejs和npm环境."></a>开始的开始，安装nodejs和npm环境.</h5><p>一般情况下，nodejs的安装包都自带了npm, 所以在安装完nodejs后即可直接使用npm了。 </p>
+<p>这里有两个名词，第一个<strong>nodejs</strong>不用说了, 火遍了整个互联网，从前端到后台到处有它的身影，想必大家都知道。 npm可能有的人不清楚，npm是node package manager的缩写，这么说大家应该就明白了，说白了，npm就是nodejs的包管理器。 </p>
+<p>使用了nodejs的项目，基本上都会有node_modules这么一个目录, 这个目录就是存放nodejs的包的地方。同时还会有一个文件package.json，这是npm用来管理node_modules模块的配置文件, 它看起来像这样<br><img src="/images/gulp-tutorial/package.json.jpg" alt="package.json"> </p>
+<p>其中的 <strong>dependencies</strong> 指定了该项目所依赖的包</p>
+<h5 id="入门指南"><a href="#入门指南" class="headerlink" title="入门指南"></a>入门指南</h5><p>参考：<a href="http://www.gulpjs.com.cn/docs/getting-started/" target="_blank" rel="external">gulp中文网-入门指南</a></p>
+<hr>
+<h3 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h3><p>接下来，我们跟大家一起动手尝试一下用gulp来进行前端css/js压缩打包的例子</p>
+<h5 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h5><p>使用了gulp的项目资源目录通常会像这样</p>
+<p><img src="/images/gulp-tutorial/gulp-structure.png" alt="screenshot"></p>
+<p>gulpfile.js 这个是用来定义gulp要执行的任务的配置文件</p>
+<h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><ol>
+<li>建立目录结构</li>
+<li>创建package.json <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm init</div></pre></td></tr></table></figure></li>
+<li><p>下载所有必须的依赖包</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">npm install --save-dev gulp</div><div class="line">npm install --save-dev gulp-sass</div><div class="line">npm install --save-dev gulp-concat</div><div class="line">npm install --save-dev gulp-minify</div><div class="line">npm install --save-dev gulp-uglifycss</div><div class="line">npm install --save-dev browser-sync</div></pre></td></tr></table></figure>
+<p> 也可以这样运行(注意: 模块之间应该用空格分隔, 不能用tab分隔)</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save-dev gulp gulp-sass gulp-concat gulp-minify gulp-uglifycss browser-sync</div></pre></td></tr></table></figure>
+</li>
+<li><p>建立gulpfile.js</p>
+</li>
+<li>运行gulp, 进行项目的开发</li>
+</ol>
+<p>最后, 附上一个gulpfile.js的例子:</p>
+<figure class="highlight plain"><figcaption><span>[gulpfile] [lang: nodejs]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line">var gulp = require(&apos;gulp&apos;);</div><div class="line">var sass = require(&apos;gulp-sass&apos;);</div><div class="line">var concat = require(&apos;gulp-concat&apos;);</div><div class="line">var minify = require(&apos;gulp-minify&apos;);</div><div class="line">var uglifycss = require(&apos;gulp-uglifycss&apos;);</div><div class="line">var browserSync = require(&apos;browser-sync&apos;);</div><div class="line">var reload  = browserSync.reload;</div><div class="line"></div><div class="line">gulp.task(&apos;styles&apos;,function()&#123;</div><div class="line">    gulp.src([</div><div class="line">        &apos;src/vender/rangeslider/rangeslider.css&apos;,</div><div class="line">        &apos;src/sass/app.scss&apos;</div><div class="line">    ])</div><div class="line">    .pipe(sass().on(&apos;error&apos;, sass.logError))</div><div class="line">    .pipe(concat(&apos;styles.min.css&apos;))</div><div class="line">    .pipe(uglifycss(&#123;&quot;maxLineLen&quot;: 800,&quot;uglyComments&quot;: true&#125;))</div><div class="line">    .pipe(gulp.dest(&apos;dest/css&apos;));</div><div class="line">&#125;);</div><div class="line"></div><div class="line">gulp.task(&apos;scripts&apos;, function() &#123;</div><div class="line">    gulp.src([</div><div class="line">        &apos;src/vender/rangeslider/rangeslider.min.js&apos;,</div><div class="line">        &apos;src/js/main.js&apos;</div><div class="line">    ])</div><div class="line">    .pipe(concat(&apos;scripts.js&apos;))</div><div class="line">    .pipe(minify(&#123;ext:&#123;src:&apos;.debug.js&apos;,min:&apos;.min.js&apos;&#125;&#125;))</div><div class="line">    .pipe(gulp.dest(&apos;dest/js&apos;));</div><div class="line">&#125;);</div><div class="line"></div><div class="line">gulp.task(&apos;watch&apos;, [&apos;build&apos;], browserSync.reload);</div><div class="line"></div><div class="line">// BrowserSync</div><div class="line">gulp.task(&apos;serve&apos;, [&apos;build&apos;], function() &#123;</div><div class="line">	browserSync(&#123;</div><div class="line">		server: &#123;</div><div class="line">			baseDir: &apos;dest&apos;</div><div class="line">		&#125;,</div><div class="line">		open: true,</div><div class="line">		online: false,</div><div class="line">		notify: true,</div><div class="line">	&#125;);</div><div class="line"></div><div class="line">	//要监控的文件</div><div class="line">	gulp.watch([</div><div class="line">		&apos;src/js/main.js&apos;</div><div class="line">	],[&apos;watch&apos;]);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">gulp.task(&apos;build&apos;, [&apos;styles&apos;, &apos;scripts&apos;]);</div><div class="line"></div><div class="line">gulp.task(&apos;default&apos;, [&apos;build&apos;]);</div><div class="line"></div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://xitengfei.github.io/gulp-tutorial/" data-id="cj45ar5u100018lmcgo7my20t" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/cookie/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Cookie 封装
+        
+      </div>
+    </a>
+  
+  
+    <a href="/sass-tutorial/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Sass 入门介绍</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/wordpress/">wordpress</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/诗词/">诗词</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/php-wordpress/">php wordpress</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/php-wordpress/" style="font-size: 10px;">php wordpress</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/poetry/post20170620-yulingling/">雨霖铃·寒蝉凄切</a>
+          </li>
+        
+          <li>
+            <a href="/technology/post20170620-httpandtcp/">HTTP协议中的短轮询、长轮询、长连接和短连接</a>
+          </li>
+        
+          <li>
+            <a href="/technology/post20170620-wordpress-experience/">WordPress 开发心得</a>
+          </li>
+        
+          <li>
+            <a href="/cookie/">Cookie 封装</a>
+          </li>
+        
+          <li>
+            <a href="/gulp-tutorial/">Gulp 入门与应用</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 XiTengfei<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/categories/诗词/" class="mobile-nav-link">诗词</a>
+  
+    <a href="/categories/技术/" class="mobile-nav-link">技术</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
