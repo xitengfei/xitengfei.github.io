@@ -3,18 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>雨霖铃·寒蝉凄切 | 西门吹雪</title>
+  <title>子元素的margin-top 传递给了父元素 | 西门吹雪</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="雨霖铃·寒蝉凄切 宋代：柳永寒蝉凄切，对长亭晚，骤雨初歇。都门帐饮无绪，留恋处，兰舟催发。执手相看泪眼，竟无语凝噎。念去去，千里烟波，暮霭沉沉楚天阔。多情自古伤离别，更那堪，冷落清秋节！今宵酒醒何处？杨柳岸，晓风残月。此去经年，应是良辰好景虚设。便纵有千种风情，更与何人说？">
+  <meta name="description" content="我们可能经常碰到这样的情况，给一个child元素加了margin-top，但是没有生效，而是传递到了父元素上。例如下面一段代码： 12345&amp;lt;div id = &amp;quot;parent&amp;quot;&amp;gt;   &amp;lt;div id = &amp;quot;child&amp;quot;&amp;gt;      demo   &amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt; 原因:这是由于CSS的外边距合并造成的。">
+<meta name="keywords" content="前端 css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="雨霖铃·寒蝉凄切">
-<meta property="og:url" content="http://xitengfei.github.io/poetry/post20170620-yulingling/index.html">
+<meta property="og:title" content="子元素的margin-top 传递给了父元素">
+<meta property="og:url" content="http://xitengfei.github.io/technology/post20170828-css-margin-prop/index.html">
 <meta property="og:site_name" content="西门吹雪">
-<meta property="og:description" content="雨霖铃·寒蝉凄切 宋代：柳永寒蝉凄切，对长亭晚，骤雨初歇。都门帐饮无绪，留恋处，兰舟催发。执手相看泪眼，竟无语凝噎。念去去，千里烟波，暮霭沉沉楚天阔。多情自古伤离别，更那堪，冷落清秋节！今宵酒醒何处？杨柳岸，晓风残月。此去经年，应是良辰好景虚设。便纵有千种风情，更与何人说？">
+<meta property="og:description" content="我们可能经常碰到这样的情况，给一个child元素加了margin-top，但是没有生效，而是传递到了父元素上。例如下面一段代码： 12345&amp;lt;div id = &amp;quot;parent&amp;quot;&amp;gt;   &amp;lt;div id = &amp;quot;child&amp;quot;&amp;gt;      demo   &amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt; 原因:这是由于CSS的外边距合并造成的。">
 <meta property="og:updated_time" content="2017-08-28T05:27:38.562Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="雨霖铃·寒蝉凄切">
-<meta name="twitter:description" content="雨霖铃·寒蝉凄切 宋代：柳永寒蝉凄切，对长亭晚，骤雨初歇。都门帐饮无绪，留恋处，兰舟催发。执手相看泪眼，竟无语凝噎。念去去，千里烟波，暮霭沉沉楚天阔。多情自古伤离别，更那堪，冷落清秋节！今宵酒醒何处？杨柳岸，晓风残月。此去经年，应是良辰好景虚设。便纵有千种风情，更与何人说？">
+<meta name="twitter:title" content="子元素的margin-top 传递给了父元素">
+<meta name="twitter:description" content="我们可能经常碰到这样的情况，给一个child元素加了margin-top，但是没有生效，而是传递到了父元素上。例如下面一段代码： 12345&amp;lt;div id = &amp;quot;parent&amp;quot;&amp;gt;   &amp;lt;div id = &amp;quot;child&amp;quot;&amp;gt;      demo   &amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt; 原因:这是由于CSS的外边距合并造成的。">
   
     <link rel="alternate" href="/atom.xml" title="西门吹雪" type="application/atom+xml">
   
@@ -71,14 +72,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-poetry/post20170620-yulingling" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-technology/post20170828-css-margin-prop" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/poetry/post20170620-yulingling/" class="article-date">
-  <time datetime="2017-06-19T16:00:00.000Z" itemprop="datePublished">2017-06-20</time>
+    <a href="/technology/post20170828-css-margin-prop/" class="article-date">
+  <time datetime="2017-08-27T16:00:00.000Z" itemprop="datePublished">2017-08-28</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/诗词/">诗词</a>
+    <a class="article-category-link" href="/categories/css/">css</a>
   </div>
 
   </div>
@@ -89,7 +90,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      雨霖铃·寒蝉凄切
+      子元素的margin-top 传递给了父元素
     </h1>
   
 
@@ -97,34 +98,38 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>雨霖铃·寒蝉凄切</p>
-<p>宋代：柳永<br>寒蝉凄切，对长亭晚，骤雨初歇。都门帐饮无绪，留恋处，兰舟催发。执手相看泪眼，竟无语凝噎。念去去，千里烟波，暮霭沉沉楚天阔。<br>多情自古伤离别，更那堪，冷落清秋节！今宵酒醒何处？杨柳岸，晓风残月。此去经年，应是良辰好景虚设。便纵有千种风情，更与何人说？</p>
+        <p>我们可能经常碰到这样的情况，给一个child元素加了margin-top，但是没有生效，而是传递到了父元素上。例如下面一段代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div id = &quot;parent&quot;&gt;</div><div class="line">   &lt;div id = &quot;child&quot;&gt;</div><div class="line">      demo</div><div class="line">   &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<h4 id="原因"><a href="#原因" class="headerlink" title="原因:"></a><strong>原因</strong>:</h4><p>这是由于CSS的外边距合并造成的。<br>外边距合并指的是，当两个垂直外边距相遇时，它们将形成一个外边距。<br>合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。</p>
+<p>margin折叠的产生有几个条件：</p>
+<p>这些margin都处于普通流中，并在同一个BFC中；<br>这些margin没有被非空内容、padding、border 或 clear 分隔开；<br>这些margin在垂直方向上是毗邻的，包括以下几种情况：<br>1、一个box的top margin与第一个子box的top margin<br>2、一个box的bottom margin与最后一个子box的bottom margin，但须在该box的height 为auto的情况下<br>3、一个box的bottom margin与紧接着的下一个box的top margin<br>4、一个box的top margin与其自身的bottom margin，但须满足没创建BFC、零min-height、零或者“auto”的height、没有普通流的子box</p>
+<p>垂直方向上毗邻的box不会发生折叠的情况：</p>
+<p>根元素的外边距不会参与折叠<br>一个有clearance的box的上下margin毗邻，它会与紧接着的下一个box发生margin折叠，但折叠后的margin不会再与它们父box的bottom margin折叠</p>
+<p>折叠边距的计算</p>
+<p>当两个margin都是正值的时候，取两者的最大值；当 margin 都是负值的时候，取的是其中绝对值较大的，然后，从 0 位置，负向位移；当有正有负的时候，先取出负 margin 中绝对值中最大的，然后，和正 margin 值中最大的 margin 相加。但必须注意，所有毗邻的margin要一起参与运算，不能分步进行。</p>
+<p>更具体的规则请参考<a href="http://www.w3school.com.cn/css/css_margin_collapsing.asp" target="_blank" rel="external">这里</a>。</p>
+<hr>
+<p>####　<strong>解决方法：</strong></p>
+<p>1、修改父元素的高度，增加padding-top样式模拟（padding-top：1px；常用）<br>2、为父元素添加overflow：hidden；样式即可（完美）<br>3、为父元素或者子元素声明浮动（float：left；可用）<br>4、为父元素添加border（border:1px solid ）<br>5、为父元素或者子元素声明绝对定位</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://xitengfei.github.io/poetry/post20170620-yulingling/" data-id="cj6vq30yd00058tmco5co41rx" class="article-share-link">分享</a>
+      <a data-url="http://xitengfei.github.io/technology/post20170828-css-margin-prop/" data-id="cj6vq30yh00088tmcfojqd8o1" class="article-share-link">分享</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端-css/">前端 css</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/technology/post20170620-httpandtcp/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          HTTP协议中的短轮询、长轮询、长连接和短连接
-        
-      </div>
-    </a>
   
-  
-    <a href="/technology/post20170620-wordpress-experience/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/technology/post20170620-httpandtcp/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">WordPress 开发心得</div>
+      <div class="article-nav-title">HTTP协议中的短轮询、长轮询、长连接和短连接</div>
     </a>
   
 </nav>
