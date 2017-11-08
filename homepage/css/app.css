@@ -1,2 +1,15 @@
+/*layout*/
+html{position: relative;min-height: 100%;}
+body{margin-bottom: 60px;}
+header{font-family:ubuntu, sans-serif, Arail;}
+footer{height: 60px;width: 100%;position: absolute;bottom: 0;padding: 10px;box-sizing: border-box;}
 
+
+/*app style*/
 body{background: url(../img/big-one.jpg);}
+
+
+/*body*/
+#body{padding-top:38px;}
+.main-menu{ position: absolute; width: 15%; left: 15%; padding-right: 10px;}
+.home-card{ position: absolute; width: 40%; left: 30%; }

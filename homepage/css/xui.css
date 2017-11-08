@@ -1,0 +1,33 @@
+
+.xui-container{ margin-left: auto; margin-right: auto; position: relative; }
+@media (min-width: 768px){
+    .xui-container{ width:750px; }
+}
+@media (min-width: 992px){
+    .xui-container{ width:970px; }
+}
+@media (min-width: 1200px){
+    .xui-container{ width:1170px; }
+}
+
+.xui-menu{box-sizing: border-box;}
+.xui-menu-list li{ background: rebeccapurple; margin-bottom:5px; }
+.xui-menu-list a{
+    padding: 10px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.xui-card{background:#fff;}
+.xui-card-avatar{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 6px solid #ddd;
+    margin: 0 auto;
+}
+.xui-card-avatar img{
+    width:100%;
+}
