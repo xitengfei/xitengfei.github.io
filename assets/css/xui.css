@@ -1,0 +1,128 @@
+
+.xui-container{ margin-left: auto; margin-right: auto; position: relative; }
+@media (min-width: 768px){
+    .xui-container{ width:750px; }
+}
+@media (min-width: 992px){
+    .xui-container{ width:970px; }
+}
+@media (min-width: 1200px){
+    .xui-container{ width:1170px; }
+}
+
+.accent-color{color: chocolate;}
+
+.xui-menu{
+    box-sizing: border-box;
+}
+.xui-menu-list li{ 
+    background: chocolate; 
+    margin-bottom:5px; 
+}
+.xui-menu-list a{
+    padding: 10px;
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    /*overflow: hidden;*/
+}
+.xui-menu-item a:before{
+    content: '';
+    display: block;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: darkslategrey;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.xui-menu-item a:hover{
+    padding-left: 20px;
+}
+.xui-menu-item a:hover:before{
+    width: 100%;
+}
+
+
+.xui-card{
+    background:#efefef;
+    padding:20px 50px;
+}
+.xui-card-avatar{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 6px solid #ddd;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+.xui-card-avatar img{
+    width:100%;
+}
+.xui-card-desc .main-title{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom:8px;
+}
+.xui-card-desc .sub-title{
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+.xui-card-desc hr{
+    border: none;
+    height: 1px;
+    background: url(../img/hr.png) no-repeat center center;
+    padding: 10px 0;
+    margin:0;
+}
+.xui-card-desc .contact-info{
+    background: chocolate;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 13px;
+    text-align: center;
+}
+.xui-card-desc .description{
+    font-size: 13px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.xui-card-footer{
+    margin-top: 15px;
+}
+.xui-card-footer .social-btns{
+    text-align: center;
+}
+.xui-card-footer .social-btns a{
+    background: #333;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    margin: 0 3px;
+}
+.xui-card-footer .social-btns a:hover{
+    background: chocolate;
+}
