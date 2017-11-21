@@ -23,18 +23,18 @@
 <section id="body">
     <div class="xui-container">
         
-        <div class="xui-menu main-menu">
+        <div class="xui-menu" id="main-menu">
             <ul class="xui-menu-list">
                 <li class="xui-menu-item"><a href="#home" class="active">Home</a></li>
                 <li class="xui-menu-item"><a href="/resume/">Resume</a></li>
                 <li class="xui-menu-item"><a href="/blog/">Blog</a></li>
                 <li class="xui-menu-item"><a href="#home">Skills</a></li>
-                <li class="xui-menu-item"><a href="#home">Cases</a></li>
+                <li class="xui-menu-item"><a href="#case-card">Cases</a></li>
                 <li class="xui-menu-item"><a href="#home">contact</a></li>
             </ul>
         </div>
 
-        <div class="xui-card home-card">
+        <div class="xui-card profile-card" id="home-card">
             <div class="xui-card-avatar">
                 <img class="avatar" src="assets/img/me3.jpg" />
             </div>
@@ -58,16 +58,21 @@
             </div>
         </div>
         <!-- end of home card -->
-<!-- 
-        <div class="xui-card resume-card">
-            
-        </div> -->
+
+        <div class="xui-card list-view-card" id="case-card">
+            <div class="card-title"><h2>Cases</h2></div>
+            <ul class="list-view">
+                <li class="item">
+                    <img src="assets/img/cases/thumb-p1.jpg" />
+                </li>
+            </ul>
+        </div>
         <!-- end of resume card -->
 
     </div>
 </section>
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="assets/app.js"></script>
+<script src="assets/js/app.js"></script>
 </body>
 </html>
