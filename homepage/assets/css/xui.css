@@ -57,10 +57,14 @@
 .xui-menu-item a:hover:before{
     width: 100%;
 }
+.xui-menu-list li.menu-active a{
+    background: darkslategrey;
+    padding-left: 20px;
+}
 
 
 .xui-card{
-    background:#efefef;
+    background: rgba(239, 239, 239, .9);
     padding:20px 50px;
     border-top: 6px solid darkslategray;
     -webkit-transition: all 0.6s ease-in-out;
@@ -136,6 +140,13 @@
     background: chocolate;
 }
 
+
+.card-title h2{
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid #333;
+}
 
 .list-view-card li img{
     width: 100%;

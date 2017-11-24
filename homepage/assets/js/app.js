@@ -14,6 +14,14 @@
             $("#body").addClass('wide-view');
             $(".xui-card").removeAttr('active-page');
             $(selector).attr('active-page', 'true');
+
+            $("#main-menu li a").each(function(){
+                if($(this).attr('href') == selector){
+                    $(this).parent('li').addClass('menu-active');
+                }else{
+                    $(this).parent('li').removeClass('menu-active');
+                }
+            });
         }
     }
 
