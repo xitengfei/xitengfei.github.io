@@ -2,6 +2,7 @@
     // console.log(1);
 
     function activeCard(selector){
+        console.log(selector);
         if(selector == '#home'){
             $("#body").removeClass('wide-view');
             $(".xui-card").removeAttr('active-page');
@@ -14,15 +15,15 @@
             $("#body").addClass('wide-view');
             $(".xui-card").removeAttr('active-page');
             $(selector).attr('active-page', 'true');
-
-            $("#main-menu li a").each(function(){
-                if($(this).attr('href') == selector){
-                    $(this).parent('li').addClass('menu-active');
-                }else{
-                    $(this).parent('li').removeClass('menu-active');
-                }
-            });
         }
+
+        $("#main-menu li a").each(function(){
+            if($(this).attr('href') == selector){
+                $(this).parent('li').addClass('menu-active');
+            }else{
+                $(this).parent('li').removeClass('menu-active');
+            }
+        });
     }
 
     var hash = window.location.hash;

@@ -28,3 +28,6 @@ body{background: url(../img/big-one-v2.jpg);}
 .wide-view #main-menu{ left: 0%; }
 .wide-view #home-card{ left: 15%; }
 .wide-view .xui-card[active-page='true']{ left: 55%; margin-left: 10px; }
+
+/*skills*/
+.skill-list{margin-top:20px;}
