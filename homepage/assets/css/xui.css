@@ -71,6 +71,9 @@
     -moz-transition: all 0.6s ease-in-out;
     transition: all 0.6s ease-in-out;
 }
+.xui-card img{
+    max-width:100%;
+}
 .xui-card-avatar{
     width: 200px;
     height: 200px;
@@ -185,7 +188,7 @@
     z-index: 2;
     color: #fff;
     font-size: 12px;
-    line-height: 22px;
+    line-height: 25px;
     text-indent: 1.5em;
 }
 .xui-progress .xui-progress-completed{
@@ -193,7 +196,7 @@
     right:8px;
     font-size:14px;
     font-weight:bold;
-    line-height:22px;
+    line-height:25px;
     color:#999;
 }
 
