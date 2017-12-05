@@ -22,17 +22,19 @@
 
 <section id="body">
     <div class="xui-container">
-        <div class="xui-menu main-menu">
+        
+        <div class="xui-menu" id="main-menu">
             <ul class="xui-menu-list">
                 <li class="xui-menu-item"><a href="#home" class="active">Home</a></li>
-                <li class="xui-menu-item"><a href="/resume/">Resume</a></li>
+                <li class="xui-menu-item"><a href="#resume-card">Resume</a></li>
+                <li class="xui-menu-item"><a href="#skills-card">Skills</a></li>
+                <li class="xui-menu-item"><a href="#case-card">Cases</a></li>
+                <li class="xui-menu-item"><a href="#contact-card">Contact</a></li>
                 <li class="xui-menu-item"><a href="/blog/">Blog</a></li>
-                <li class="xui-menu-item"><a href="#home">Skills</a></li>
-                <li class="xui-menu-item"><a href="#home">Cases</a></li>
-                <li class="xui-menu-item"><a href="#home">contact</a></li>
             </ul>
         </div>
-        <div class="xui-card home-card">
+
+        <div class="xui-card profile-card" id="home-card">
             <div class="xui-card-avatar">
                 <img class="avatar" src="assets/img/me3.jpg" />
             </div>
@@ -55,10 +57,142 @@
                 </div>
             </div>
         </div>
+        <!-- end of home card -->
+
+        <div class="xui-card" id="resume-card">
+            <h2 class="card-title">Resume</h2>
+            <ul class="list-view">
+                <li class="item">
+                    <img src="assets/img/cases/thumb-p1.jpg" />
+                </li>
+            </ul>
+        </div>
+        <!-- end of resume card -->
+
+        <div class="xui-card" id="skills-card">
+            <h2 class="card-title">Skills</h2>
+            <h3 class="card-sub-title"><i class="fa fa-users" aria-hidden="true"></i>Professional Skills</h3>
+            <ul class="list-view skill-list">
+                <li class="item">
+                    <div class="xui-progress">
+                        <div class="xui-progress-bar" data-percent="60%" style="width: 60%;"></div>
+                        <span class="xui-progress-label">Comunication</span>
+                        <span class="xui-progress-completed">60%</span>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="xui-progress">
+                        <div class="xui-progress-bar" data-percent="60%" style="width: 60%;"></div>
+                        <span class="xui-progress-label">Problem Solving</span>
+                        <span class="xui-progress-completed">60%</span>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="xui-progress">
+                        <div class="xui-progress-bar" data-percent="60%" style="width: 60%;"></div>
+                        <span class="xui-progress-label">OOP</span>
+                        <span class="xui-progress-completed">60%</span>
+                    </div>
+                </li>
+            </ul>
+
+            <h3 class="card-sub-title"><i class="fa fa-users" aria-hidden="true"></i>Code Skills</h3>
+            <ul class="list-view skill-list">
+                <li class="item">
+                    <div class="xui-progress">
+                        <div class="xui-progress-bar" data-percent="60%" style="width: 60%;"></div>
+                        <span class="xui-progress-label">PHP</span>
+                        <span class="xui-progress-completed">60%</span>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="xui-progress">
+                        <div class="xui-progress-bar" data-percent="60%" style="width: 60%;"></div>
+                        <span class="xui-progress-label">Html5/CSS3</span>
+                        <span class="xui-progress-completed">60%</span>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="xui-progress">
+                        <div class="xui-progress-bar" data-percent="60%" style="width: 60%;"></div>
+                        <span class="xui-progress-label">Javascript</span>
+                        <span class="xui-progress-completed">60%</span>
+                    </div>
+                </li>
+            </ul>
+
+            <h3 class="card-sub-title"><i class="fa fa-users" aria-hidden="true"></i>Other Skills</h3>
+            <ul class="list-view skill-list">
+                <li class="item">
+                    <div class="xui-progress">
+                        <div class="xui-progress-bar" data-percent="60%" style="width: 60%;"></div>
+                        <span class="xui-progress-label">Comunication</span>
+                        <span class="xui-progress-completed">60%</span>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="xui-progress">
+                        <div class="xui-progress-bar" data-percent="60%" style="width: 60%;"></div>
+                        <span class="xui-progress-label">Linux</span>
+                        <span class="xui-progress-completed">60%</span>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="xui-progress">
+                        <div class="xui-progress-bar" data-percent="60%" style="width: 60%;"></div>
+                        <span class="xui-progress-label">Git/svn</span>
+                        <span class="xui-progress-completed">60%</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- end of skills card -->
+
+        <div class="xui-card list-view-card" id="case-card">
+            <h2 class="card-title">Cases</h2>
+            <ul class="list-view">
+                <li class="item">
+                    <img src="assets/img/cases/thumb-p1.jpg" />
+                </li>
+            </ul>
+        </div>
+        <!-- end of cases card -->
+        
+        <div class="xui-card" id="contact-card">
+            <h2 class="card-title">Contact</h2>
+            <div class="contact-info-list">
+                <h3 class="card-sub-title">Address</h3>
+                <p>ChangPing, Beijing, China</p>
+                <h3 class="card-sub-title">Phone</h3>
+                <p>+86 15652203404</p>
+                <h3 class="card-sub-title">Email</h3>
+                <p>447360803@qq.com</p>
+            </div>
+            <h3 class="card-sub-title">Send Me a Message</h3>
+            <form action="/" id="contactForm" class="xui-form">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="name" placeholder="Name" required/>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" name="email" placeholder="Email" required/>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="subject" placeholder="Subject" required/>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="message" placeholder="Message" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="xui-btn submit-btn" value="Send!" />
+                </div>
+            </form>
+        </div>
+        <!-- end of contact card -->
+
     </div>
 </section>
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="assets/app.js"></script>
+<script src="assets/js/app.js"></script>
 </body>
 </html>
