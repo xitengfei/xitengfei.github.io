@@ -36,6 +36,5 @@
     $(window).on('hashchange', function() {
         var hash = window.location.hash;
         activeCard(hash);
-    })
-
+    });
 }();

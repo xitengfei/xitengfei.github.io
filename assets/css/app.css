@@ -14,7 +14,7 @@ header{}
 footer{height: 60px;width: 100%;position: absolute;bottom: 0;padding: 10px;box-sizing: border-box;}
 
 /*app style*/
-body{background: url(../img/big-one-v2.jpg);}
+body{background: url(../img/bg1.jpg);}
 
 
 /*body*/
@@ -28,6 +28,15 @@ body{background: url(../img/big-one-v2.jpg);}
 .wide-view #main-menu{ left: 0%; }
 .wide-view #home-card{ left: 15%; }
 .wide-view .xui-card[active-page='true']{ left: 55%; margin-left: 10px; }
+
+
+/*resume*/
+.resume-buttons{margin-bottom:20px;}
+.resume-buttons a{ font-size: 10px;padding:8px 16px; font-weight: normal; }
+.resume-item{padding:15px;border: 4px double #ccc;}
+.resume-item .title{font-weight: bold;font-size: 18px;color:#333;}
+.resume-item .sub-title{ font-size: 11px; font-style: italic; border-bottom: 1px solid #ccc;padding-bottom:5px; line-height: 20px; }
+.resume-item .description{ padding:5px; }
 
 /*skills*/
 .skill-list{margin-top:20px;}
