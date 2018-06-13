@@ -2,6 +2,8 @@
 
 > Tengfei's Personal Home Page
 
+UI refer to https://dotrex.co/theme-preview/cards/
+
 
 ## Env
 1. install nodejs

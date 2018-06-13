@@ -102,6 +102,9 @@
 .xui-card img{
     max-width:100%;
 }
+.xui-card section{
+    margin-bottom: 35px;
+}
 .xui-card-avatar{
     width: 200px;
     height: 200px;
@@ -199,7 +202,11 @@
     font-size: 16px;
     font-weight: bold;
     color: chocolate;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    font-family: Montserrat, sans-serif;
 }
 
 /*xui progress*/
