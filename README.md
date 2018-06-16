@@ -2,7 +2,7 @@
 
 > Tengfei's Personal Home Page
 
-UI refer to https://dotrex.co/theme-preview/cards/
+UI refer to <https://dotrex.co/theme-preview/cards/>
 
 
 ## Env

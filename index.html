@@ -16,7 +16,10 @@
 <link rel="stylesheet" href="assets/css/reset.css" />
 <link rel="stylesheet" href="assets/css/xui.css" />
 <link rel="stylesheet" href="assets/css/app.css" />
-<style type="text/css"></style>
+<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.6&key=b125d25da25b000c94fae76ff2dc0d01"></script> 
+<style type="text/css">
+    #gaode-map-container{width:100%; height: 220px; }  
+</style>
 </head>
 <body>
 
@@ -62,8 +65,8 @@
         <div class="xui-card" id="resume-card">
             <h2 class="card-title">Resume</h2>
             <div class="resume-buttons">
-                <a href="#" class="xui-btn xui-btn-default"><i class="fa fa-download"></i> Download Resume</a>
-                <a href="#" class="xui-btn xui-btn-default"><i class="fa fa-at"></i> Get in Touch </a>
+                <a href="/resume/郗腾飞PHPEngineer.doc" download="PHP Engineer Tengfei's Resume" class="xui-btn xui-btn-default"><i class="fa fa-download"></i> Download Resume</a>
+                <a href="/#contact-card" class="xui-btn xui-btn-default"><i class="fa fa-at"></i> Get in Touch </a>
             </div>
 
             <section class="education">
@@ -72,7 +75,7 @@
                 <div class="resume-item">
                     <h3 class="title">Digital Media Technology</h3>
                     <h5 class="sub-title">XuChang University ( 4 Years ) <span> - Graduation June 2014</span></h5>
-                    <p class="description">This is a subject belong to computer science department.<p>
+                    <p class="description">This is a subject belong to computer science department. Main Course: Computer Foundation, Operating System Principle, Data Structure, JAVA, Web Page Built, PS, 3Ds MAX etc. <p>
                 </div>
             </section>
 
@@ -88,6 +91,12 @@
                 <div class="resume-item">
                     <h3 class="title">Like Tuan</h3>
                     <h5 class="sub-title">PHP Engineer<span> - June 2014 - Feb 2015</span></h5>
+                    <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<p>
+                </div>
+
+                <div class="resume-item">
+                    <h3 class="title">YouHaoHuDong</h3>
+                    <h5 class="sub-title">PHP Engineer<span> - October 2013 - June 2014</span></h5>
                     <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<p>
                 </div>
             </section>
@@ -109,7 +118,7 @@
                 <li class="item">
                     <div class="xui-progress">
                         <div class="xui-progress-bar" data-percent="85%" style="width: 85%;"></div>
-                        <span class="xui-progress-label">Problem Solving</span>
+                        <span class="xui-progress-label">Bug Fixing</span>
                         <span class="xui-progress-completed">85%</span>
                     </div>
                 </li>
@@ -134,7 +143,7 @@
                 <li class="item">
                     <div class="xui-progress">
                         <div class="xui-progress-bar" data-percent="75%" style="width: 75%;"></div>
-                        <span class="xui-progress-label">Javascript</span>
+                        <span class="xui-progress-label">Js/jQuery</span>
                         <span class="xui-progress-completed">75%</span>
                     </div>
                 </li>
@@ -159,7 +168,7 @@
                 <li class="item">
                     <div class="xui-progress">
                         <div class="xui-progress-bar" data-percent="60%" style="width: 60%;"></div>
-                        <span class="xui-progress-label">Git/svn</span>
+                        <span class="xui-progress-label">Git/Svn</span>
                         <span class="xui-progress-completed">60%</span>
                     </div>
                 </li>
@@ -180,6 +189,7 @@
         <div class="xui-card" id="contact-card">
             <h2 class="card-title">Contact</h2>
             <div class="contact-info-list">
+                <div id="gaode-map-container"></div>
                 <h3 class="card-sub-title">Address</h3>
                 <p>ChangPing, Beijing, China</p>
                 <h3 class="card-sub-title">Phone</h3>
@@ -187,7 +197,6 @@
                 <h3 class="card-sub-title">Email</h3>
                 <p>447360803@qq.com</p>
             </div>
-            <h3 class="card-sub-title">Send Me a Message</h3>
         </div>
         <!-- end of contact card -->
 
@@ -196,5 +205,21 @@
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="assets/js/app.js"></script>
+<script type="text/javascript">
+    //116.288865,40.148278
+    var map = new AMap.Map('gaode-map-container', {
+        zoom:11,//级别
+        center: [116.2888,40.1482],//中心点坐标
+        viewMode:'3D'//使用3D视图
+    });
+
+    var marker = new AMap.Marker({
+        position: new AMap.LngLat(116.2888,40.1482),   // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+        title: '北京昌平'
+    });
+
+    // 将创建的点标记添加到已有的地图实例：
+    map.add(marker);
+</script>
 </body>
 </html>
