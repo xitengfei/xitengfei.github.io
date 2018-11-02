@@ -1,26 +1,50 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import './reset.css';
 import './App.css';
+import './Xui.css';
+import data from './data/data'
+import Menu from './components/Menu'
+import HomeCard from './components/cards/HomeCard'
+import ResumeCard from './components/cards/ResumeCard'
 
 class App extends Component {
+  constructor(){
+    super()
+
+    this.state = {
+      activePageHash:''
+    }
+
+    this.menuItemClick = this.menuItemClick.bind(this)
+  }
+
+  menuItemClick(ev){
+    let link = ev.target.href
+    let hash = link.slice(link.indexOf('#')+1);
+    this.setState({
+      activePageHash: hash
+    })
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <section id="body" className={this.state.activePageHash == '' ? '':'wide-view'} >
+        <div className="xui-container">
+          <Menu 
+            menus={data.menus}
+            menuItemClick={this.menuItemClick}
+          ></Menu>
+          <HomeCard
+            id="home-card"
+            classes="profile-card"
+            isActive={ "home-card" == this.state.activePageHash ? true : false }
+          ></HomeCard>
+          <ResumeCard
+            isActive={ "resume-card" == this.state.activePageHash ? true : false }
+          ></ResumeCard>
+        </div>
+      </section>
     );
   }
 }
