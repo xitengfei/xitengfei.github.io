@@ -1,11 +1,12 @@
 import React from 'react'
+import avatar from '../../img/me3.jpg'
 
 const Card = (props) => {
     let {classes, id} = props
     return (
         <div className={`xui-card ${classes}`} id={id}>
             <div className="xui-card-avatar">
-                <img className="avatar" src="assets/img/me3.jpg" />
+                <img className="avatar" src={avatar} />
             </div>
             <div className="xui-card-desc">
                 <h1 className="main-title">Hi, i'm <i className="accent-color">XiTengfei!</i></h1>

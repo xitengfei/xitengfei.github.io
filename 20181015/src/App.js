@@ -7,6 +7,7 @@ import data from './data/data'
 import Menu from './components/Menu'
 import HomeCard from './components/cards/HomeCard'
 import ResumeCard from './components/cards/ResumeCard'
+import SkillsCard from './components/cards/SkillsCard'
 
 class App extends Component {
   constructor(){
@@ -43,6 +44,9 @@ class App extends Component {
           <ResumeCard
             isActive={ "resume-card" == this.state.activePageHash ? true : false }
           ></ResumeCard>
+          <SkillsCard
+            isActive={ "skills-card" == this.state.activePageHash ? true : false }
+          ></SkillsCard>
         </div>
       </section>
     );
