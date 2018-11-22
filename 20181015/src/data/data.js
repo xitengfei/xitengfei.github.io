@@ -1,10 +1,10 @@
 export default {
     menus:[
-        {link:'#home', title:"Home"},
-        {link:'#resume-card', title:"Resume"},
-        {link:'#skills-card', title:"Skills"},
-        {link:'#case-card', title:"Cases"},
-        {link:'#contact-card', title:"Contact"},
-        {link:'http://xitengfei.github.io/blog/', title:"Blog"},
+        {link:'#home', title:"Home", openNewTab:false},
+        {link:'#resume-card', title:"Resume", openNewTab:false},
+        {link:'#skills-card', title:"Skills", openNewTab:false},
+        {link:'#case-card', title:"Cases", openNewTab:false},
+        {link:'#contact-card', title:"Contact", openNewTab:false},
+        {link:'http://xitengfei.github.io/blog/', title:"Blog", openNewTab:true},
     ]
 }

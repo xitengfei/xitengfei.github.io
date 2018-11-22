@@ -1,12 +1,16 @@
 import React from 'react'
+import Card from './Card'
 import avatar from '../../img/me3.jpg'
 
-const Card = (props) => {
-    let {classes, id} = props
+const HomeCard = (props) => {
     return (
-        <div className={`xui-card ${classes}`} id={id}>
+        <Card
+            id="home-card"
+            classes="profile-card"
+            title=""
+        >
             <div className="xui-card-avatar">
-                <img className="avatar" src={avatar} />
+                <img className="avatar" alt="tengfei" src={avatar} />
             </div>
             <div className="xui-card-desc">
                 <h1 className="main-title">Hi, i'm <i className="accent-color">XiTengfei!</i></h1>
@@ -21,13 +25,13 @@ const Card = (props) => {
             </div>
             <div className="xui-card-footer">
                 <div className="social-btns">
-                    <a href="https://www.facebook.com/profile.php?id=100009324970191" target="_blank"><i className="fa fa-facebook"></i></a>
-                    <a href="https://github.com/xitengfei" target="_blank"><i className="fa fa-github"></i></a>
-                    <a href="https://twitter.com/xitengfei" target="_blank"><i className="fa fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100009324970191" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook"></i></a>
+                    <a href="https://github.com/xitengfei" target="_blank" rel="noopener noreferrer"><i className="fa fa-github"></i></a>
+                    <a href="https://twitter.com/xitengfei" target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter"></i></a>
                 </div>
             </div>
-        </div>
+        </Card>
     )
 }
 
-export default Card 
+export default HomeCard 

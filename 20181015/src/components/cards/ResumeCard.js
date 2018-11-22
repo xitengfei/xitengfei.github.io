@@ -1,11 +1,15 @@
 import React from 'react'
+import Card from './Card'
 
 function ResumeCard(props){
     return (
-        <div className="xui-card" id="resume-card" active-page={props.isActive ? 'true':'false'} >
-            <h2 className="card-title">Resume</h2>
+        <Card
+            id="resume-card"
+            title="Resume"
+            isActive={props.isActive}
+        >
             <div className="resume-buttons">
-                <a href="/resume/郗腾飞PHPEngineer.doc" download="PHP Engineer Tengfei's Resume" className="xui-btn xui-btn-default"><i className="fa fa-download"></i> Download Resume</a>
+                <a href="/resume/FE-Tengfei-resume.pdf" download="FE Tengfei's Resume" className="xui-btn xui-btn-default"><i className="fa fa-download"></i> Download Resume</a>
                 <a href="/#contact-card" className="xui-btn xui-btn-default"><i className="fa fa-at"></i> Get in Touch </a>
             </div>
 
@@ -40,7 +44,7 @@ function ResumeCard(props){
                     <p className="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                 </div>
             </section>
-        </div>
+        </Card>
     )
 }
 

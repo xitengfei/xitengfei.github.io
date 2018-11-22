@@ -7,6 +7,7 @@ const Menu = (props) => {
             <a 
                 href={link}
                 onClick={props.menuItemClick}
+                target={openNewTab ? '_blank' : '_self' }
             >{title}</a>
         </li>
     )

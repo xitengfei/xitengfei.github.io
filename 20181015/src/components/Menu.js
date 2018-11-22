@@ -11,6 +11,7 @@ const Menu = (props) => {
                         key={i}
                         link={item.link} 
                         title={item.title}
+                        openNewTab={item.openNewTab}
                         menuItemClick={menuItemClick}
                     >
                     </MenuItem>
