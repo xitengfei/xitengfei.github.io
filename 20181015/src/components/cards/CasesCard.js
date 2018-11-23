@@ -9,8 +9,8 @@ function CasesCard(props){
             title="Cases"
             isActive={props.isActive}
         >
-            <ul class="list-view">
-                <li class="item">
+            <ul className="list-view">
+                <li className="item">
                     <img src={case1} alt="case1" />
                 </li>
             </ul>

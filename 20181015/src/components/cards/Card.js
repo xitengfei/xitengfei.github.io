@@ -8,7 +8,7 @@ function Card(props){
             id={id} 
             active-page={isActive ? 'true':'false'} 
         >
-            { props.title && (<h2 className="card-title">Resume</h2>) }
+            { props.title && (<h2 className="card-title">{props.title}</h2>) }
             {props.children}
         </div>
     )
