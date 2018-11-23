@@ -1,30 +1,8 @@
 import React from 'react'
 import Card from './Card'
-
+import AMap from '../widgets/AMap' 
 
 class ContactCard extends React.Component{
-    constructor(props){
-        super(props)
-    }
-
-    componentDidMount(){
-        // if(typeof AMap == 'object'){
-        //     var map = new AMap.Map('gaode-map-container', {
-        //         zoom:11,//级别
-        //         center: [116.2888,40.1482],//中心点坐标
-        //         viewMode:'3D'//使用3D视图
-        //     });
-        
-        //     var marker = new AMap.Marker({
-        //         position: new AMap.LngLat(116.2888,40.1482),   // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
-        //         title: '北京昌平'
-        //     });
-        
-        //     // 将创建的点标记添加到已有的地图实例：
-        //     map.add(marker);
-        // }
-    }
-
     render(){
         return(
             <Card
@@ -33,7 +11,13 @@ class ContactCard extends React.Component{
                 isActive={this.props.isActive}
             >
             <div className="contact-info-list">
-                <div id="gaode-map-container"></div>
+                <div id="gaode-map-container">
+                    <AMap
+                        position={[116.2888,40.1482]}
+                        zoom={11}
+                        viewMode={'3D'}
+                    />
+                </div>
                 <h3 className="card-sub-title">Address</h3>
                 <p>ChangPing, Beijing, China</p>
                 <h3 className="card-sub-title">Phone</h3>
