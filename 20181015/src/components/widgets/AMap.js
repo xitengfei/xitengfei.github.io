@@ -9,7 +9,7 @@ const mapStyle = {
 class AMap extends React.Component{
     
     componentWillMount(){
-        let amapApiUrl = 'http://webapi.amap.com/maps?v=1.4.6&key=b125d25da25b000c94fae76ff2dc0d01'
+        let amapApiUrl = '//webapi.amap.com/maps?v=1.4.6&key=b125d25da25b000c94fae76ff2dc0d01'
         Tools.asyncLoadScript(amapApiUrl, ()=>{
             this.initAMap()
         })
