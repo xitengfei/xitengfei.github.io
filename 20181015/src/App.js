@@ -5,6 +5,7 @@ import './App.css';
 import './Xui.css';
 import data from './data/data'
 import Menu from './components/Menu'
+import Tools from './components/tools/Tools'
 
 import HomeCard from './components/cards/HomeCard'
 import ResumeCard from './components/cards/ResumeCard'
@@ -15,19 +16,17 @@ import ContactCard from './components/cards/ContactCard'
 class App extends Component {
   constructor(){
     super()
-
+    
     this.state = {
-      activePageHash:''
+      activePageHash: Tools.getUrlHash(window.location.href)
     }
 
     this.menuItemClick = this.menuItemClick.bind(this)
   }
 
   menuItemClick(ev){
-    let link = ev.target.href
-    let hash = link.indexOf('#') > -1 ? link.slice(link.indexOf('#')+1) : "";
     this.setState({
-      activePageHash: hash
+      activePageHash: Tools.getUrlHash(ev.target.href)
     })
   }
 

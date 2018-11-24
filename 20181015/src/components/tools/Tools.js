@@ -49,6 +49,10 @@ class Tools
             Tools.asyncLoadScript(scripts[i], afterLoad)
         }
     }
+
+    static getUrlHash(url){
+        return url.indexOf('#') > -1 ? url.slice(url.indexOf('#')+1) : "";
+    }
 }
  
 export default Tools;
