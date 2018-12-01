@@ -3,15 +3,15 @@ import './reset.css';
 import './xui.css';
 
 import Home from './pages/home/Home'
+import YiKaTong from './pages/yikatong/YiKaTong'
 
 class App extends Component {
-  constructor(){
-    super()
-  }
-
   render() {
     return (
-      <Home />
+      <div>
+        <Home />
+        <YiKaTong />
+      </div>
     );
   }
 }

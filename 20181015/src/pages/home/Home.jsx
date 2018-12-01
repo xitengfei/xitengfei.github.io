@@ -29,8 +29,9 @@ class Home extends React.Component {
   }
 
   render() {
-    let mainClass = this.state.activePageHash === '' || this.state.activePageHash === "home" ? '':'wide-view'
+    let mainClass = (this.state.activePageHash === '' || this.state.activePageHash === "home") ? '':'wide-view'
     return (
+      <div className="page-home">
         <main className={mainClass}>
             <div className="xui-container">
             <Menu 
@@ -44,6 +45,7 @@ class Home extends React.Component {
             <ContactCard isActive={ "contact-card" === this.state.activePageHash ? true : false } />
             </div>
         </main>
+      </div>
     );
   }
 }

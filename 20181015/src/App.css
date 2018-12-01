@@ -1,0 +1,13 @@
+/*global*/
+body{font-family:'Montserrat', sans-serif, Arail;line-height: 1.42857143;color: #333;}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*layout*/
+html{position: relative;min-height: 100%;}
+body{margin-bottom: 60px;}
+header{}
+footer{height: 60px;width: 100%;position: absolute;bottom: 0;padding: 10px;box-sizing: border-box;}
