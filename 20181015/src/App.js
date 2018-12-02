@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import './reset.css';
-import './xui.css';
 
 import Home from './pages/home/Home'
 import YiKaTong from './pages/yikatong/YiKaTong'
