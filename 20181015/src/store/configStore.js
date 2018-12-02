@@ -6,7 +6,8 @@ import reducer from '@/reducers'
 
 const loggerMiddleware = createLogger()
 
-export default (preloadedState) => {
+
+const configStore = (preloadedState) => {
     return createStore(
         reducer,
         preloadedState,
@@ -16,3 +17,5 @@ export default (preloadedState) => {
         )
     )
 }
+
+export default configStore

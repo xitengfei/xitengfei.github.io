@@ -1,5 +1,4 @@
 import React from 'react';
-import data from '../../data/menu'
 import Menu from '../../components/Menu'
 import Tools from '../../components/tools/Tools'
 
@@ -35,12 +34,15 @@ class Home extends React.Component {
         <main className={mainClass}>
             <div className="xui-container">
             <Menu 
-                menus={data.menus}
+                menus={this.props.menus}
                 menuItemClick={this.menuItemClick}
             ></Menu>
             <HomeCard isActive={ "home-card" === this.state.activePageHash ? true : false } />
             <ResumeCard isActive={ "resume-card" === this.state.activePageHash ? true : false } />
-            <SkillsCard isActive={ "skills-card" === this.state.activePageHash ? true : false } />
+            <SkillsCard 
+              isActive={ "skills-card" === this.state.activePageHash ? true : false } 
+              skills={this.props.skills}
+            />
             <CasesCard isActive={ "case-card" === this.state.activePageHash ? true : false } />
             <ContactCard isActive={ "contact-card" === this.state.activePageHash ? true : false } />
             </div>

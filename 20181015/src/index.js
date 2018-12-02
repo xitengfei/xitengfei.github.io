@@ -2,12 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
-import store from '@/store'
+import configStore from '@/store/configStore'
 import Route from '@/router/'
 import * as serviceWorker from './serviceWorker';
 
 import './reset.css';
 import './xui.css';
+import dataMenus from '@/data/menu'
+
+const store = configStore({
+    menuStore:dataMenus
+});
 
 ReactDOM.render(
     <Provider store={store} >
