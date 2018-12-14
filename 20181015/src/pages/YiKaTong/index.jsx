@@ -11,15 +11,33 @@ import './index.scss'
 const { Header, Footer, Sider, Content } = Layout;
 
 class YiKaTong extends React.Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            checkedItems:['昌平区', '延庆区']
+        }
+
+        this.onCheckAreas = this.onCheckAreas.bind(this)
+    }
+    
     componentDidMount(){
         this.props.getAllData();
     }
+
     filterItems(){
         const {scenicSpots} = this.props
+        const {checkedItems} = this.state
         return scenicSpots.filter((item)=>{
-            return item.area_name === '昌平区' || item.area_name === '海淀区'
+            return checkedItems.indexOf(item.area_name) > -1
         })
     }
+
+    onCheckAreas(checkedItems){
+        this.setState({
+            checkedItems: checkedItems
+        })
+    }
+
     render(){
         console.log('YiKaTong render')
         const dataItems = this.filterItems()
@@ -27,7 +45,11 @@ class YiKaTong extends React.Component{
             <Layout className="layout-yikatong">
                 <Header>京津冀一卡通一览表</Header>
                 <Content>
-                    <FilterBox />
+                    <FilterBox
+                        options={this.props.areas}
+                        checkedItems={this.state.checkedItems}
+                        onCheckAreas={this.onCheckAreas}
+                    />
                     <Card className="main-card">
                         <ResultPanel 
                             dataItems={dataItems}
@@ -42,7 +64,8 @@ class YiKaTong extends React.Component{
 
 const mapStateToProps = (store, ownProps) => {
     return {
-        scenicSpots: store.yikatongStore.scenicSpots
+        scenicSpots: store.yikatongStore.scenicSpots,
+        areas: store.yikatongStore.areas,
     }
 }
 

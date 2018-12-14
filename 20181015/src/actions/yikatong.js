@@ -20,7 +20,7 @@ export function fetchYiKaTongData(){
             const response = await axios.get(`/json/test.json`);
 
             const scenicSpots = mergeData(response.data)
-            const areas = response.data.map(item => item.area_name)
+            const areas = response.data.map(item => item.area_name).filter(item => typeof item != 'undefined')
             
             dispatch({type: actionTypes.SET_YIKATONG_DATA, payload: scenicSpots})
             dispatch({type: actionTypes.SET_YIKATONG_AREAS, payload: areas})

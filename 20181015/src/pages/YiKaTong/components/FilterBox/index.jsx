@@ -1,14 +1,23 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {DatePicker, Card} from 'antd'
+import {DatePicker, Checkbox, Card} from 'antd'
 import locale from 'antd/lib/date-picker/locale/zh_CN'
 
 import './index.scss'
 
 const {RangePicker} = DatePicker
+const CheckboxGroup = Checkbox.Group
 
 class FilterBox extends React.Component{
-    
+    constructor(props){
+        super(props)
+        this.state = {
+            checkedItems: props.checkedItems
+        }
+
+        this.onAreaChange = this.onAreaChange.bind(this)
+    }
+
     onRangeChange(date, dateString){
         console.log(date, dateString);
     }
@@ -17,7 +26,17 @@ class FilterBox extends React.Component{
         console.log('ok', val)
     }
 
+    onAreaChange(checkedItems){
+        console.log('checkedItems', checkedItems)
+        this.setState({
+            checkedItems
+        })
+        this.props.onCheckAreas(checkedItems)
+    }
+
     render(){
+        const {options} = this.props
+        const {checkedItems} = this.state
         return (
             <div className="filter-box">
                 <Card>
@@ -30,6 +49,13 @@ class FilterBox extends React.Component{
                         placeholder={['开始', '结束']}
                         onOk={this.onRangeOK}
                     />
+
+                    <lable>选择区域</lable>
+                    <CheckboxGroup
+                        options={options}
+                        value={checkedItems}
+                        onChange={this.onAreaChange}
+                    />
                 </Card>
             </div>
         )
@@ -37,9 +63,7 @@ class FilterBox extends React.Component{
 }
 
 const mapStateToProps = function(store, ownProps){
-    return {
-        scenicSpots: store.yikatongStore.scenic_spots
-    }
+    return {}
 }
 
 const mapDispatchToProps = function(dispatch, ownProps){
