@@ -6,6 +6,7 @@
     "antd": "^3.10.9",
     "axios": "^0.18.0",
     "babel-plugin-import": "^1.11.0",
+    "node-sass": "^4.11.0",
     "react": "^16.5.2",
     "react-app-rewired": "^1.6.2",
     "react-dom": "^16.5.2",

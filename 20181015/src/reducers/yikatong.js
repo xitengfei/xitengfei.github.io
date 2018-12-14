@@ -3,7 +3,9 @@ import {
 } from '@/constants/actionTypes'
 
 const yikatongStore = (
-    state = {}, 
+    state = {
+        scenic_spots:[]
+    }, 
     action
 ) => {
     switch(action.type){

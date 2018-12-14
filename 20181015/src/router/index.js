@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 
 import Home from "@/pages/home/HomeContainer"
-import YiKaTong from "@/pages/yikatong/YiKaTongContainer"
+import YiKaTong from "@/pages/YiKaTong"
 
 export default class RouteConfig extends React.Component{
     render(){

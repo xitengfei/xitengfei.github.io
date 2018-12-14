@@ -7,7 +7,7 @@ import Route from '@/router/'
 import * as serviceWorker from './serviceWorker';
 
 import './reset.css';
-import './xui.css';
+import './Xui.css';
 import dataMenus from '@/data/menu'
 
 const store = configStore({
