@@ -7,6 +7,9 @@
         background: transparent;
         color: white;
     }
+    .ant-layout-content{
+        min-height: calc(100vh - 128px);
+    }
     .main-card{
         width:60%;
         min-width: 600px;

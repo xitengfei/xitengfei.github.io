@@ -1,16 +1,17 @@
-import {
-    SET_YIKATONG_DATA,
-} from '@/constants/actionTypes'
+import * as actionTypes from '@/constants/actionTypes'
 
 const yikatongStore = (
     state = {
-        scenic_spots:[]
+        scenicSpots:[],
+        areas:[],
     }, 
     action
 ) => {
     switch(action.type){
-        case SET_YIKATONG_DATA:
-            return Object.assign({}, state, {scenic_spots: action.payload})
+        case actionTypes.SET_YIKATONG_DATA:
+            return Object.assign({}, state, {scenicSpots: action.payload})
+        case actionTypes.SET_YIKATONG_AREAS:
+            return Object.assign({}, state, {areas: action.payload})
         default:
             return state
     }

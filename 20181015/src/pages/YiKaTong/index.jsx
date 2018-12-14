@@ -4,7 +4,7 @@ import * as actions from '@/actions/yikatong'
 import { Layout, Card } from 'antd'
 
 import FilterBox from './components/FilterBox'
-import RetrievalBox from './components/RetrievalBox'
+import ResultPanel from './components/ResultPanel'
 
 import './index.scss'
 
@@ -14,15 +14,24 @@ class YiKaTong extends React.Component{
     componentDidMount(){
         this.props.getAllData();
     }
+    filterItems(){
+        const {scenicSpots} = this.props
+        return scenicSpots.filter((item)=>{
+            return item.area_name === '昌平区' || item.area_name === '海淀区'
+        })
+    }
     render(){
         console.log('YiKaTong render')
+        const dataItems = this.filterItems()
         return (
             <Layout className="layout-yikatong">
                 <Header>京津冀一卡通一览表</Header>
                 <Content>
                     <FilterBox />
                     <Card className="main-card">
-                        <RetrievalBox />
+                        <ResultPanel 
+                            dataItems={dataItems}
+                        />
                     </Card>
                 </Content>
                 <Footer>Footer</Footer>
@@ -33,7 +42,7 @@ class YiKaTong extends React.Component{
 
 const mapStateToProps = (store, ownProps) => {
     return {
-        scenic_spots: store.yikatongStore.scenic_spots
+        scenicSpots: store.yikatongStore.scenicSpots
     }
 }
 
