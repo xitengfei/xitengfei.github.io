@@ -50,7 +50,7 @@ class FilterBox extends React.Component{
                         onOk={this.onRangeOK}
                     />
 
-                    <lable>选择区域</lable>
+                    <label>选择区域</label>
                     <CheckboxGroup
                         options={options}
                         value={checkedItems}

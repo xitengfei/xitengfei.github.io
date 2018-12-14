@@ -1,0 +1,13 @@
+.result-panel{
+    .area_name{
+        vertical-align:middle;
+        &.old{
+            background-color: #cfcfcf;
+        }
+    }
+    table{
+        tr:nth-child(2n){
+            background-color: #cfcfcf;
+        }
+    }
+}

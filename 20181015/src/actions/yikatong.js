@@ -4,9 +4,9 @@ import * as actionTypes from '@/constants/actionTypes'
 const mergeData = (lists) => {
     let items = []
     lists.map((list)=>{
-        list.items.map((item)=>{
+        return list.items.map((item)=>{
             item.area_name = list.area_name
-            items.push(item)
+            return items.push(item)
         })
     })
     return items
