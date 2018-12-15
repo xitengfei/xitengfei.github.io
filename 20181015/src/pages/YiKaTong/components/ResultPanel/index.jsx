@@ -4,10 +4,10 @@ import { Table } from 'antd'
 import './index.scss'
 
 class ResultPanel extends React.Component{
-    dataLength = 0;
-    currentPageItems = [];
-    state = {
-        pageSize: 10
+    pagination = {
+        pageSize: 10,
+        dataLength: 0,
+        currentPageItems: [],
     }
 
     constructor(props){
@@ -19,20 +19,28 @@ class ResultPanel extends React.Component{
 
     getColumns(){
         let prevRow = null
-        let isOld = true
+        let isOdd = true
         return [{
             title: '区域',
             dataIndex: 'area_name',
             render: (value, row, index)=>{
-                if(index === 0) prevRow = null
+                // reset for a new page
+                if(index === 0) { 
+                    prevRow = null
+                    isOdd = true
+                }
 
+                // show area name
                 let rowspan = 0
                 let className = ''
                 if(!prevRow || prevRow.area_name !== row.area_name){
-                    rowspan = this.currentPageItems.filter(item => item.area_name === row.area_name).length
-                    isOld = !isOld
-                    className = 'area_name' + (isOld?' old':'')
+                    const {currentPageItems} = this.pagination
+                    rowspan = currentPageItems.filter(item => item.area_name === row.area_name).length
+                    className = 'area_name' + (isOdd?' odd':' even')
+                    isOdd = !isOdd
                 }
+
+                // set previous row
                 prevRow = row
 
                 return {
@@ -64,16 +72,16 @@ class ResultPanel extends React.Component{
     setCurrentPageItems(page, pageSize){
         let start = pageSize * (page -1)
         let end = start + pageSize
-        end = end < this.dataLength ? end : this.dataLength
-        this.currentPageItems = this.props.dataItems.slice(start, end)
+        end = end < this.pagination.dataLength ? end : this.pagination.dataLength
+        this.pagination.currentPageItems = this.props.dataItems.slice(start, end)
     }
 
     render(){
         console.log('RetrievalBox render')
 
         const {dataItems} = this.props
-        this.dataLength = dataItems.length
-        this.setCurrentPageItems(1, this.state.length)
+        this.pagination.dataLength = dataItems.length
+        this.setCurrentPageItems(1, this.pagination.pageSize)
 
         return(
             <div className="result-panel">
@@ -83,11 +91,11 @@ class ResultPanel extends React.Component{
                     dataSource={dataItems} 
                     columns={this.getColumns()}
                     pagination={{
-                        pageSize: this.state.pageSize,
+                        pageSize: this.pagination.pageSize,
                         // hideOnSinglePage: true,
                         onChange: (page, pageSize) => {this.setCurrentPageItems(page, pageSize)},
                         showSizeChanger: true,
-                        onShowSizeChange: (current, size) =>{this.setState({pageSize: size})}
+                        onShowSizeChange: (current, size) =>{this.pagination.pageSize = size}
                     }}
                     bordered
                 />
