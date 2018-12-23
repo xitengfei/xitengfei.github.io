@@ -1,73 +1,94 @@
 import React from 'react'
-import {connect} from 'react-redux'
-import {DatePicker, Checkbox, Card} from 'antd'
+import { connect } from 'react-redux'
+import { DatePicker, Button, Checkbox, Card } from 'antd'
 import locale from 'antd/lib/date-picker/locale/zh_CN'
 
 import './index.scss'
 
 const {RangePicker} = DatePicker
 const CheckboxGroup = Checkbox.Group
+const ButtonGroup = Button.Group;
 
 class FilterBox extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            checkedItems: props.checkedItems
+            checkedAreas: ['昌平区', '延庆区'],
         }
-
-        this.onAreaChange = this.onAreaChange.bind(this)
     }
 
-    onRangeChange(date, dateString){
+    onRangeChange = (date, dateString) => {
         console.log(date, dateString);
     }
 
-    onRangeOK(val){
+    onRangeOK = (val) => {
         console.log('ok', val)
     }
 
-    onAreaChange(checkedItems){
-        console.log('checkedItems', checkedItems)
+    onAreaChange = (areas) => {
         this.setState({
-            checkedItems
+            checkedAreas: areas
         })
-        this.props.onCheckAreas(checkedItems)
+        this.filtersChange()
+    }
+
+    filtersChange = () => {
+        this.props.onFiltersChange({
+            checkedAreas: this.state.checkedAreas
+        })
     }
 
     render(){
-        const {options} = this.props
-        const {checkedItems} = this.state
         return (
             <div className="filter-box">
-                <Card>
-                    <label>请选择一个时间</label>
-                    <RangePicker 
-                        locale={locale}
-                        onChange={this.onRangeChange} 
-                        showTime={{ format: 'HH:mm' }}
-                        format="YYYY-MM-DD"
-                        placeholder={['开始', '结束']}
-                        onOk={this.onRangeOK}
-                    />
+                <div className="filter-box-body">
+                    <div className="filter-group">
+                        <h3 className="filter-group-title">请选择一个时间</h3>
+                        <div className="filter-group-content">
+                            <RangePicker 
+                                locale={locale}
+                                onChange={this.onRangeChange} 
+                                showTime={{ format: 'HH:mm' }}
+                                format="YYYY-MM-DD"
+                                placeholder={['开始', '结束']}
+                                onOk={this.onRangeOK}
+                            />
+                        </div>
+                    </div>
 
-                    <label>选择区域</label>
-                    <CheckboxGroup
-                        options={options}
-                        value={checkedItems}
-                        onChange={this.onAreaChange}
-                    />
-                </Card>
+                    <div className="filter-group">
+                        <h3 className="filter-group-title">选择区域</h3>
+                        <div className="filter-group-content">
+                            <CheckboxGroup
+                                options={this.props.areas}
+                                value={this.state.checkedAreas}
+                                onChange={this.onAreaChange}
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div className="filter-box-footer">
+                    <ButtonGroup>
+                        <Button 
+                            type="primary"
+                            onClick={this.props.onConfirm}
+                        >确定</Button>
+                        <Button 
+                            type="default"
+                            onClick={this.props.onCancle}
+                        >取消</Button>
+                    </ButtonGroup>
+                </div>
             </div>
         )
     }
 }
 
 const mapStateToProps = function(store, ownProps){
-    return {}
+    return {
+        areas: store.yikatongStore.areas,
+    }
 }
 
-const mapDispatchToProps = function(dispatch, ownProps){
-    return {}
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(FilterBox)
+export default connect(mapStateToProps)(FilterBox)

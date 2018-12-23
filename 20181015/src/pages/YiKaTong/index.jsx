@@ -1,20 +1,25 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import * as actions from '@/actions/yikatong'
-import { Layout, Card } from 'antd'
+import { Layout, Drawer, Card, Spin } from 'antd'
 
+import HeaderBox from './components/HeaderBox'
 import FilterBox from './components/FilterBox'
 import ResultPanel from './components/ResultPanel'
+import YiKaTongTools from './tools.js'
 
 import './index.scss'
 
-const { Header, Footer, Sider, Content } = Layout;
+const { Header, Footer, Content } = Layout;
 
 class YiKaTong extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            checkedItems:['昌平区', '延庆区']
+            showFilterBox: false,
+            inFiltering: false,
+            filters:{},
+            filterResult: [],
         }
 
         this.onCheckAreas = this.onCheckAreas.bind(this)
@@ -22,6 +27,17 @@ class YiKaTong extends React.Component{
     
     componentDidMount(){
         this.props.getAllData();
+    }
+
+    closeFilterBox = () => {
+        this.setState({
+            showFilterBox: false,
+        })
+    }
+    openFilterBox = () => {
+        this.setState({
+            showFilterBox: true,
+        })
     }
 
     filterItems(){
@@ -38,25 +54,58 @@ class YiKaTong extends React.Component{
         })
     }
 
+    handleFiltersChange = (filters) => {
+        this.setState({
+            inFiltering: true,
+            filters: filters,
+        })
+
+        // start filtering
+        const items = JSON.parse(JSON.stringify(this.props.scenicSpots))
+        const filterResult = YiKaTongTools.filterItems(items, filters)
+
+        setTimeout(()=>{
+            // set current Items
+            this.setState({
+                inFiltering: false,
+                filterResult: filterResult,
+            })
+        }, 500)
+    }
+
     render(){
-        console.log('YiKaTong render')
-        const dataItems = this.filterItems()
+        const {inFiltering, filterResult} = this.state
         return (
             <Layout className="layout-yikatong">
-                <Header>京津冀一卡通一览表</Header>
-                <Content>
-                    <FilterBox
-                        options={this.props.areas}
-                        checkedItems={this.state.checkedItems}
-                        onCheckAreas={this.onCheckAreas}
+                <Header>
+                    <HeaderBox 
+                        onClickFilterBtn={this.openFilterBox} 
                     />
+                </Header>
+                <Content>
                     <Card className="main-card">
-                        <ResultPanel 
-                            dataItems={dataItems}
-                        />
+                        { inFiltering ? (<Spin />) : (<ResultPanel 
+                            dataItems={filterResult}
+                        />)}
                     </Card>
                 </Content>
                 <Footer>Footer</Footer>
+
+                <Drawer
+                    // title=""
+                    placement="right"
+                    closable={false}
+                    width={600}
+                    onClose={this.closeFilterBox}
+                    visible={this.state.showFilterBox}
+                >
+                    <FilterBox
+                        options={this.props.areas}
+                        onCancle={this.closeFilterBox}
+                        onConfirm={this.closeFilterBox}
+                        onFiltersChange={this.handleFiltersChange}
+                    />
+                </Drawer>
             </Layout>
         )
     }
@@ -65,7 +114,6 @@ class YiKaTong extends React.Component{
 const mapStateToProps = (store, ownProps) => {
     return {
         scenicSpots: store.yikatongStore.scenicSpots,
-        areas: store.yikatongStore.areas,
     }
 }
 

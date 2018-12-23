@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 
 import Home from "@/pages/home/HomeContainer"
-import YiKaTong from "@/pages/YiKaTong"
+import YiKaTongContainer from "@/pages/YiKaTong"
 
 export default class RouteConfig extends React.Component{
     render(){
@@ -11,7 +11,7 @@ export default class RouteConfig extends React.Component{
             <BrowserRouter>
                 <Switch>
                     <Route path="/" exact component={Home} />
-                    <Route path="/yikatong" component={YiKaTong} />
+                    <Route path="/yikatong" component={YiKaTongContainer} />
                 </Switch>
             </BrowserRouter>
         )

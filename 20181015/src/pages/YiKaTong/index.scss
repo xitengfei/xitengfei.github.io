@@ -4,8 +4,23 @@
     background-position: top;
     background-attachment: fixed;
     .ant-layout-header, .ant-layout-footer{
-        background: transparent;
-        color: white;
+        // background: transparent;
+        background: rgba(0,0,0, .5);
+        h1{
+            color: white;
+        }
+        .search-box{
+            text-align: center;
+            .ant-input-search{
+                display: inline-block;
+                max-width: 500px;
+            }
+        }
+        .filter-btn{
+            cursor: pointer;
+            float: right;
+            color: white;
+        }
     }
     .ant-layout-content{
         min-height: calc(100vh - 128px);
@@ -15,4 +30,13 @@
         min-width: 600px;
         margin: 0 auto;
     }
+
+    
+}
+.main-cardant-drawer-content-wrapper{
+    padding-top: 64px;
+}
+
+.ant-drawer-body{
+    height: 100%;
 }
