@@ -89,7 +89,8 @@ class YiKaTong extends React.Component{
             <Layout className="layout-yikatong">
                 <Header>
                     <HeaderBox 
-                        onClickFilterBtn={this.openFilterBox} 
+                        onClickFilterBtn={this.openFilterBox}
+                        scenicSpots={this.props.scenicSpots}
                     />
                 </Header>
                 <Content>
