@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { DatePicker, Button, Checkbox, Card } from 'antd'
+import { DatePicker, Button, Checkbox } from 'antd'
 import locale from 'antd/lib/date-picker/locale/zh_CN'
 
 import './index.scss'
@@ -13,7 +13,7 @@ class FilterBox extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            checkedAreas: ['昌平区', '延庆区'],
+            checkedAreas: props.defaultFilters.checkedAreas,
         }
     }
 

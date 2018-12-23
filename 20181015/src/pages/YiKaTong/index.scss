@@ -24,11 +24,14 @@
     .ant-layout-content{
         min-height: calc(100vh - 128px);
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .main-card{
         width:60%;
         min-width: 600px;
-        margin: 0 auto;
+        margin: 35px auto 35px;
     }
 }
 .main-cardant-drawer-content-wrapper{

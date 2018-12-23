@@ -14,6 +14,10 @@ import './index.scss'
 const { Header, Footer, Content } = Layout;
 
 class YiKaTong extends React.Component{
+    defaultFilters = {
+        checkedAreas: ['昌平区', '延庆区'],
+    }
+
     constructor(props){
         super(props)
         this.state = {
@@ -26,7 +30,14 @@ class YiKaTong extends React.Component{
     }
     
     componentDidMount(){
-        this.props.getAllData();
+        this.props.getAllData()
+    }
+
+    componentWillReceiveProps(nextProps){
+        console.log('YiKaTong -- componentWillReceiveProps')
+        if(nextProps.scenicSpots){
+            this.applyFiltersUpdate(this.defaultFilters)
+        }
     }
 
     closeFilterBox = () => {
@@ -54,22 +65,22 @@ class YiKaTong extends React.Component{
         })
     }
 
-    handleFiltersChange = (filters) => {
+    applyFiltersUpdate = (filters) => {
         this.setState({
             inFiltering: true,
             filters: filters,
         })
 
-        // start filtering
-        const filterResult = YiKaTongTools.filterItems(simpleDeepClone(this.props.scenicSpots), filters)
-
         setTimeout(()=>{
+            // start filtering
+            const filterResult = YiKaTongTools.filterItems(simpleDeepClone(this.props.scenicSpots), filters)
+
             // set current Items
             this.setState({
                 inFiltering: false,
                 filterResult: filterResult,
             })
-        }, 500)
+        }, 1000)
     }
 
     render(){
@@ -98,10 +109,10 @@ class YiKaTong extends React.Component{
                     visible={this.state.showFilterBox}
                 >
                     <FilterBox
-                        options={this.props.areas}
+                        defaultFilters={this.defaultFilters}
                         onCancle={this.closeFilterBox}
                         onConfirm={this.closeFilterBox}
-                        onFiltersChange={this.handleFiltersChange}
+                        onFiltersChange={this.applyFiltersUpdate}
                     />
                 </Drawer>
             </Layout>
@@ -110,6 +121,7 @@ class YiKaTong extends React.Component{
 }
 
 const mapStateToProps = (store, ownProps) => {
+    console.log('YiKaTong mapStateToProps', store);
     return {
         scenicSpots: store.yikatongStore.scenicSpots,
     }

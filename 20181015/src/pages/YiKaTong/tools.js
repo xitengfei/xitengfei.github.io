@@ -1,6 +1,6 @@
 class YiKaTongTools{
     static filterItems = (items, filters) => {
-        // console.log(items, filters)
+        console.log(items, filters)
         let newItems = [];
         
         if(filters.checkedAreas && filters.checkedAreas.length){
