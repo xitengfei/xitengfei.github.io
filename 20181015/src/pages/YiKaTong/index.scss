@@ -1,10 +1,9 @@
 .layout-yikatong{
-    background-image: url('../../img/yikatong/fengjing.jpg');
+    background-image: url('./img/fengjing.jpg');
     background-size: 100%;
     background-position: top;
     background-attachment: fixed;
     .ant-layout-header, .ant-layout-footer{
-        // background: transparent;
         background: rgba(0,0,0, .5);
         h1{
             color: white;
@@ -24,14 +23,13 @@
     }
     .ant-layout-content{
         min-height: calc(100vh - 128px);
+        text-align: center;
     }
     .main-card{
         width:60%;
         min-width: 600px;
         margin: 0 auto;
     }
-
-    
 }
 .main-cardant-drawer-content-wrapper{
     padding-top: 64px;

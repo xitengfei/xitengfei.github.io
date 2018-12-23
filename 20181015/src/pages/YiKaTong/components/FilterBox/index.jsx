@@ -26,16 +26,18 @@ class FilterBox extends React.Component{
     }
 
     onAreaChange = (areas) => {
+        console.log('onAreaChange', areas)
         this.setState({
             checkedAreas: areas
         })
-        this.filtersChange()
+        this.filtersChanged({checkedAreas: areas})
     }
 
-    filtersChange = () => {
-        this.props.onFiltersChange({
+    filtersChanged = (updatedFilter) => {
+        let filters = {
             checkedAreas: this.state.checkedAreas
-        })
+        }
+        this.props.onFiltersChange(Object.assign(filters, updatedFilter))
     }
 
     render(){

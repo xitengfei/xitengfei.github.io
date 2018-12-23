@@ -7,6 +7,7 @@ import HeaderBox from './components/HeaderBox'
 import FilterBox from './components/FilterBox'
 import ResultPanel from './components/ResultPanel'
 import YiKaTongTools from './tools.js'
+import {simpleDeepClone} from '@/tools/objectHelper.js'
 
 import './index.scss'
 
@@ -21,7 +22,6 @@ class YiKaTong extends React.Component{
             filters:{},
             filterResult: [],
         }
-
         this.onCheckAreas = this.onCheckAreas.bind(this)
     }
     
@@ -61,8 +61,7 @@ class YiKaTong extends React.Component{
         })
 
         // start filtering
-        const items = JSON.parse(JSON.stringify(this.props.scenicSpots))
-        const filterResult = YiKaTongTools.filterItems(items, filters)
+        const filterResult = YiKaTongTools.filterItems(simpleDeepClone(this.props.scenicSpots), filters)
 
         setTimeout(()=>{
             // set current Items
@@ -92,7 +91,6 @@ class YiKaTong extends React.Component{
                 <Footer>Footer</Footer>
 
                 <Drawer
-                    // title=""
                     placement="right"
                     closable={false}
                     width={600}

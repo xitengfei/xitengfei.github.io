@@ -17,6 +17,14 @@ class ResultPanel extends React.Component{
         this.setCurrentPageItems = this.setCurrentPageItems.bind(this)
     }
 
+    componentDidMount(){
+        console.log('ResultPanel componentDidMount!')
+    }
+
+    componentWillUnmount(){
+        console.log('ResultPanel componentWillUnmount!')
+    }
+
     getColumns(){
         let prevRow = null
         let isOdd = true
@@ -77,8 +85,6 @@ class ResultPanel extends React.Component{
     }
 
     render(){
-        console.log('RetrievalBox render')
-
         const {dataItems} = this.props
         this.pagination.dataLength = dataItems.length
         this.setCurrentPageItems(1, this.pagination.pageSize)
@@ -87,12 +93,10 @@ class ResultPanel extends React.Component{
             <div className="result-panel">
                 <Table 
                     rowKey="id"
-                    // loading="true"
                     dataSource={dataItems} 
                     columns={this.getColumns()}
                     pagination={{
                         pageSize: this.pagination.pageSize,
-                        // hideOnSinglePage: true,
                         onChange: (page, pageSize) => {this.setCurrentPageItems(page, pageSize)},
                         showSizeChanger: true,
                         onShowSizeChange: (current, size) =>{this.pagination.pageSize = size}
