@@ -1,14 +1,15 @@
 import React from 'react';
-import Menu from '../../components/Menu'
-import Tools from '../../components/tools/Tools'
+import Menu from './components/Menu'
+import Tools from '@/tools/tools'
 
-import HomeCard from '../../components/cards/HomeCard'
-import ResumeCard from '../../components/cards/ResumeCard'
-import SkillsCard from '../../components/cards/SkillsCard'
-import CasesCard from '../../components/cards/CasesCard'
-import ContactCard from '../../components/cards/ContactCard'
+import HomeCard from './components/cards/HomeCard'
+import ResumeCard from './components/cards/ResumeCard'
+import SkillsCard from './components/cards/SkillsCard'
+import CasesCard from './components/cards/CasesCard'
+import ContactCard from './components/cards/ContactCard'
 
 import './Home.css';
+import './Xui.css';
 
 class Home extends React.Component {
   constructor(){

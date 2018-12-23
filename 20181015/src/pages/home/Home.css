@@ -1,5 +1,5 @@
 /*home style*/
-.page-home{background: url(../../img/bg1.jpg);padding-top:38px;min-height: 100vh;}
+.page-home{background: url(./img/bg1.jpg);padding-top:38px;min-height: 100vh;}
 
 #main-menu{ position: absolute; width: 15%; left: 15%; padding-right: 10px;}
 

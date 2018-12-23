@@ -1,5 +1,5 @@
 import React from 'react'
-import Tools from '../tools/Tools'
+import Tools from '@/tools/tools'
 
 const mapStyle = {
     width: '100%',

@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 
-import Home from "@/pages/home/HomeContainer"
+import Home from "@/pages/Home/HomeContainer"
 import YiKaTongContainer from "@/pages/YiKaTong"
 
 export default class RouteConfig extends React.Component{
