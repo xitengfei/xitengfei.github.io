@@ -108,6 +108,7 @@ class YiKaTong extends React.Component{
                     <HeaderBox 
                         onClickFilterBtn={this.openFilterBox}
                         scenicSpots={this.props.scenicSpots}
+                        areas={this.props.areas}
                         onSearch={this.handleSearch}
                     />
                 </Header>
@@ -143,6 +144,7 @@ const mapStateToProps = (store, ownProps) => {
     console.log('YiKaTong mapStateToProps', store);
     return {
         scenicSpots: store.yikatongStore.scenicSpots,
+        areas: store.yikatongStore.areas,
     }
 }
 

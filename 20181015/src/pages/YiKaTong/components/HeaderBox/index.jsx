@@ -19,11 +19,20 @@ class HeaderBox extends React.Component{
     handleSearch = (value) => {
         if ( !value || value === '' || value === ' ' ) return []
 
+        // search in scenicSpots
         const dataItems = this.props.scenicSpots.filter(item => {
             return item.name.indexOf(value) > -1
         })
         const items = dataItems.map(item => {
             return item.name;
+        })
+
+        // search in areas
+        const areas = this.props.areas.filter(item => {
+            return item.indexOf(value) > -1
+        })
+        areas.map(area => {
+            items.push('查看区域：' + area + '的全部结果')
         })
 
         this.setState({
