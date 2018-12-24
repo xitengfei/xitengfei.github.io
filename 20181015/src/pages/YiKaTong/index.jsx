@@ -83,6 +83,23 @@ class YiKaTong extends React.Component{
         }, 1000)
     }
 
+    handleSearch = (key) => {
+        this.setState({
+            inFiltering: true,
+        })
+
+        setTimeout(()=>{
+            // start filtering
+            const filterResult = this.props.scenicSpots.filter(item => { return item.name.indexOf(key) > -1 })
+
+            // set current Items
+            this.setState({
+                inFiltering: false,
+                filterResult: filterResult,
+            })
+        }, 1000)
+    }
+
     render(){
         const {inFiltering, filterResult} = this.state
         return (
@@ -91,6 +108,7 @@ class YiKaTong extends React.Component{
                     <HeaderBox 
                         onClickFilterBtn={this.openFilterBox}
                         scenicSpots={this.props.scenicSpots}
+                        onSearch={this.handleSearch}
                     />
                 </Header>
                 <Content>

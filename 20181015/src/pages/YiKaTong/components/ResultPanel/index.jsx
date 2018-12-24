@@ -103,14 +103,11 @@ class ResultPanel extends React.Component{
                         current: this.state.currentPage,
                         pageSize: this.state.pageSize,
                         onChange: (currentPage, pageSize) => {
-                            // this.setCurrentPageItems(currentPage, pageSize)
-                            console.log("currentPage", currentPage)
                             this.setState({currentPage: currentPage, pageSize: pageSize})
                         },
                         showSizeChanger: true,
                         onShowSizeChange: (currentPage, pageSize) => {
                             this.setState({ currentPage : 1, pageSize: pageSize })
-                            // this.pagination.pageSize = currentPage
                         }
                     }}
                     bordered

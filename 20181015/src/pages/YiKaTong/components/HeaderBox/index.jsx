@@ -4,11 +4,16 @@ import './index.scss'
 
 class HeaderBox extends React.Component{
     state = {
-        dataSource: []
+        dataSource: [],
+        keyWord: null,
     }
 
-    onSelect = (value) => {
-        console.log('onSelect', value);
+    handleSelect = (value) => {
+        this.props.onSearch(value)
+    }
+
+    handleSearchBtnClick = () => {
+        this.props.onSearch(this.state.keyWord)
     }
     
     handleSearch = (value) => {
@@ -21,10 +26,9 @@ class HeaderBox extends React.Component{
             return item.name;
         })
 
-        console.log("search, items", value, items)
-
         this.setState({
-            dataSource: items
+            dataSource: items,
+            keyWord: value,
         });
     }
 
@@ -41,15 +45,20 @@ class HeaderBox extends React.Component{
                             size="large"
                             style={{ width: '100%' }}
                             dataSource={this.state.dataSource}
-                            onSelect={this.onSelect}
+                            onSelect={this.handleSelect}
                             onSearch={this.handleSearch}
                             placeholder="请输入景区名称"
                         >
                             <Input
                                 suffix={(
-                                <Button className="search-btn" size="large" type="primary">
-                                    <Icon type="search" />
-                                </Button>
+                                    <Button 
+                                        className="search-btn" 
+                                        size="large" 
+                                        type="primary"
+                                        onClick={this.handleSearchBtnClick}
+                                    >
+                                        <Icon type="search" />
+                                    </Button>
                                 )}
                             />
                         </AutoComplete>

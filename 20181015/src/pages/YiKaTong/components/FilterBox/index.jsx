@@ -45,7 +45,7 @@ class FilterBox extends React.Component{
             <div className="filter-box">
                 <div className="filter-box-body">
                     <div className="filter-group">
-                        <h3 className="filter-group-title">请选择一个时间</h3>
+                        <h3 className="filter-group-title">选择一个时间段</h3>
                         <div className="filter-group-content">
                             <RangePicker 
                                 locale={locale}
