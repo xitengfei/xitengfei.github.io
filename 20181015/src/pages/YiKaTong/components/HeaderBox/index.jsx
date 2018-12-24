@@ -1,8 +1,6 @@
 import React from 'react'
-
 import {Row, Col, Input, Button, Icon, AutoComplete} from 'antd'
-
-const Search = Input.Search;
+import './index.scss'
 
 class HeaderBox extends React.Component{
     state = {
@@ -14,7 +12,7 @@ class HeaderBox extends React.Component{
     }
     
     handleSearch = (value) => {
-        if ( !value || value == '' || value === ' ' ) return []
+        if ( !value || value === '' || value === ' ' ) return []
 
         const dataItems = this.props.scenicSpots.filter(item => {
             return item.name.indexOf(value) > -1
@@ -36,28 +34,26 @@ class HeaderBox extends React.Component{
                 <Col span={6}>
                     <h1>京津冀一卡通一览表</h1>
                 </Col>
-                <Col className="search-box" xs={18} sm={12}>
-                    {/* <Search
-                        placeholder="请输入景区名称"
-                        onSearch={value => console.log(value)}
-                        size="large"
-                        enterButton
-                    /> */}
-                    <AutoComplete
-                        dataSource={this.state.dataSource}
-                        onSelect={this.onSelect}
-                        onSearch={this.handleSearch}
-                        placeholder="请输入景区名称"
-                        size="large"
-                    >
-                        <Input
-                            suffix={(
-                            <Button className="search-btn" size="large" type="primary">
-                                <Icon type="search" />
-                            </Button>
-                            )}
-                        />
-                    </AutoComplete>
+                <Col xs={18} sm={12}>
+                    <div className="global-search-wrapper">
+                        <AutoComplete
+                            className="global-search"
+                            size="large"
+                            style={{ width: '100%' }}
+                            dataSource={this.state.dataSource}
+                            onSelect={this.onSelect}
+                            onSearch={this.handleSearch}
+                            placeholder="请输入景区名称"
+                        >
+                            <Input
+                                suffix={(
+                                <Button className="search-btn" size="large" type="primary">
+                                    <Icon type="search" />
+                                </Button>
+                                )}
+                            />
+                        </AutoComplete>
+                    </div>
                 </Col>
                 <Col span={6} >
                     <div className="filter-btn" onClick={this.props.onClickFilterBtn}>

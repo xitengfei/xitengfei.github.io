@@ -5,9 +5,13 @@ import './index.scss'
 
 class ResultPanel extends React.Component{
     pagination = {
-        pageSize: 10,
         dataLength: 0,
         currentPageItems: [],
+    }
+
+    state = {
+        currentPage: 1,
+        pageSize: 10,
     }
 
     constructor(props){
@@ -87,7 +91,7 @@ class ResultPanel extends React.Component{
     render(){
         const {dataItems} = this.props
         this.pagination.dataLength = dataItems.length
-        this.setCurrentPageItems(1, this.pagination.pageSize)
+        this.setCurrentPageItems(this.state.currentPage, this.state.pageSize)
 
         return(
             <div className="result-panel">
@@ -96,10 +100,18 @@ class ResultPanel extends React.Component{
                     dataSource={dataItems} 
                     columns={this.getColumns()}
                     pagination={{
-                        pageSize: this.pagination.pageSize,
-                        onChange: (page, pageSize) => {this.setCurrentPageItems(page, pageSize)},
+                        current: this.state.currentPage,
+                        pageSize: this.state.pageSize,
+                        onChange: (currentPage, pageSize) => {
+                            // this.setCurrentPageItems(currentPage, pageSize)
+                            console.log("currentPage", currentPage)
+                            this.setState({currentPage: currentPage, pageSize: pageSize})
+                        },
                         showSizeChanger: true,
-                        onShowSizeChange: (current, size) =>{this.pagination.pageSize = size}
+                        onShowSizeChange: (currentPage, pageSize) => {
+                            this.setState({ currentPage : 1, pageSize: pageSize })
+                            // this.pagination.pageSize = currentPage
+                        }
                     }}
                     bordered
                 />
