@@ -1,5 +1,5 @@
 import React from 'react'
-import {Row, Col, Input, Button, Icon, AutoComplete} from 'antd'
+import {Input, Button, Icon, AutoComplete} from 'antd'
 import './index.scss'
 
 class HeaderBox extends React.Component{
@@ -43,11 +43,14 @@ class HeaderBox extends React.Component{
 
     render(){
         return (
-            <Row gutter={10}>
-                <Col span={6}>
-                    <h1>京津冀一卡通一览表</h1>
-                </Col>
-                <Col xs={18} sm={12}>
+            <div className="yikatong-header">
+                <div className="brand">
+                    <div className="logo">
+                        <img className="hidden-sm"  src={require("../../img/yikatong-logo.png")} alt="京津冀旅游一卡通" />
+                        <img className="hidden-md"  src={require("../../img/yikatong-logo-sm.png")} alt="京津冀旅游一卡通" />
+                    </div>
+                </div>
+                <div className="main">
                     <div className="global-search-wrapper">
                         <AutoComplete
                             className="global-search"
@@ -72,13 +75,13 @@ class HeaderBox extends React.Component{
                             />
                         </AutoComplete>
                     </div>
-                </Col>
-                <Col span={6} >
+                </div>
+                <div className="right">
                     <div className="filter-btn" onClick={this.props.onClickFilterBtn}>
                         筛选 <Icon type="filter" />
                     </div>
-                </Col>
-            </Row>
+                </div>
+            </div>
         )
     }
 }

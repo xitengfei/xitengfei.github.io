@@ -1,6 +1,7 @@
 $row_alternative_color: #e3e3e3;
 $areaname_alternative_color: #f44336;
 .result-panel{
+    overflow: scroll;
     .area_name{
         vertical-align:middle;
         &.odd{
@@ -15,5 +16,8 @@ $areaname_alternative_color: #f44336;
         tr:nth-child(2n){
             background-color: $row_alternative_color;
         }
+    }
+    .ant-table-wrapper{
+        min-width: 720px;
     }
 }

@@ -16,7 +16,7 @@
                 }
                 .ant-input-suffix {
                     right: 0;
-                    margin-top: -1px;
+                    // margin-top: -1px;
                     button {
                         border-top-left-radius: 0;
                         border-bottom-left-radius: 0;
@@ -27,7 +27,35 @@
 
         .ant-select-search__field{
             input.ant-input{
-                border: none;
+                // border: none;
+            }
+        }
+    }
+}
+
+.yikatong-header{
+    display: flex;
+    align-items: center;
+    img{
+        width: 100%;
+    }
+    .brand, .right{
+        width: 50px;
+        flex: auto;
+    }
+    .brand{
+        .logo{
+            width: 45px;
+        }
+    }
+
+    @media all and (min-width: 768px){
+        .brand, .right{
+            width: 150px;
+        }
+        .brand{
+            .logo{
+                width: 120px;
             }
         }
     }

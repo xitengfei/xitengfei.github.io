@@ -15,7 +15,7 @@ const { Header, Footer, Content } = Layout;
 
 class YiKaTong extends React.Component{
     defaultFilters = {
-        checkedAreas: ['昌平区', '延庆区'],
+        checkedAreas: ['昌平区', '海淀区'],
     }
 
     constructor(props){

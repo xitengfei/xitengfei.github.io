@@ -21,3 +21,6 @@
 
 /*skills*/
 .skill-list{margin-top:20px;}
+
+/*cases*/
+.case-card .list-view .item{border: 1px solid #ccc; padding: 20px;}
