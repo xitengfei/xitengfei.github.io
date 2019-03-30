@@ -1,6 +1,5 @@
 import {combineReducers} from 'redux';
 import dataProfile from '@/data/profile'
-import yikatongStore from '@/reducers/yikatong'
 
 const menuStore = (
     state = {},
@@ -18,6 +17,5 @@ const profileStore = (
 
 export default combineReducers({
     menuStore,
-    profileStore,
-    yikatongStore
+    profileStore
 })

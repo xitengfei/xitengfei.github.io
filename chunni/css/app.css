@@ -1,0 +1,52 @@
+body{
+    background-color: #009966;
+    color: #fff;
+}
+.container{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.page-header{
+    color: #fefefe;;;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #22bb88;
+    background-image: url("../img/bg.png");
+    background-repeat: repeat;
+}
+.page-header .logo{
+    flex: 0 108px;
+}
+.page-header .heading{
+    flex: 1;
+    margin-left: 12px;
+}
+.page-header .title{
+    font-family:'lixukexingshu18740c5d1e16d9d';
+    text-shadow: 1px 1px 2px rgba(34,34,34,0.5);
+    margin: 15px 0;
+    font-size: 40px;
+}
+.page-header .subtitle{
+    font-family: '微软雅黑';
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+footer{
+    text-align: center;
+}
+footer a{
+    color: #fff;
+    text-decoration: none;
+}
