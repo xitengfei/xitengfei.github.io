@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "381567ab8fb868e0ea23ff53231466b8",
-    "url": "/static/media/thumb-p1.381567ab.jpg"
+    "revision": "e2b130ffada6fc4581caf29eb93d63b8",
+    "url": "/static/media/yikatong-cover.e2b130ff.jpg"
   },
   {
     "revision": "3c429a3a15ecfe4cee19f35e5e00f920",
@@ -20,19 +20,19 @@ self.__precacheManifest = [
     "url": "/static/js/runtime~main.229c360f.js"
   },
   {
-    "revision": "c426aaca3af74427e1f0",
-    "url": "/static/js/main.c426aaca.chunk.js"
+    "revision": "8f1af483cd322383625d",
+    "url": "/static/js/main.8f1af483.chunk.js"
   },
   {
-    "revision": "3c90db04b44b3fff7f6e",
-    "url": "/static/js/1.3c90db04.chunk.js"
+    "revision": "8afa863690139ef1668a",
+    "url": "/static/js/1.8afa8636.chunk.js"
   },
   {
-    "revision": "c426aaca3af74427e1f0",
-    "url": "/static/css/main.8073f73c.chunk.css"
+    "revision": "8f1af483cd322383625d",
+    "url": "/static/css/main.403300a4.chunk.css"
   },
   {
-    "revision": "c7e8b09e7fc8ff7cfd363445067c56d2",
+    "revision": "21423856ba3f0e50e95dee4b8df9b7ae",
     "url": "/index.html"
   }
 ];
