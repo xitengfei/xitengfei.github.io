@@ -2,7 +2,7 @@
 /*container*/
 .xui-container{ margin-left: auto; margin-right: auto; position: relative; }
 @media (min-width: 768px){
-    .xui-container{ width:750px; }
+    .xui-container{ width:750px; min-height: 680px; }
 }
 @media (min-width: 992px){
     .xui-container{ width:970px; }
@@ -99,6 +99,7 @@
     -webkit-box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.46);
     -moz-box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.46);
     box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.46);
+    box-sizing: border-box;
 }
 .xui-card img{
     max-width:100%;
