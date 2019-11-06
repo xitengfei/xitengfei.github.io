@@ -8,6 +8,7 @@ class ContactCard extends React.Component{
             <Card
                 id="contact-card"
                 title="Contact"
+                classes="contact-card"
                 isActive={this.props.isActive}
             >
             <div className="contact-info-list">

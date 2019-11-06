@@ -7,6 +7,7 @@ function SkillsCard({isActive, skills}){
         <Card
             id="skills-card"
             title="Skills"
+            classes="skills-card"
             isActive={isActive}
         >
             {   
@@ -15,7 +16,15 @@ function SkillsCard({isActive, skills}){
                         <h3 className="card-sub-title"><i className="fa fa-users" aria-hidden="true"></i>{skill.title}</h3>
                         {skill.items.length && (
                             <ul className="list-view skill-list">
-                                {skill.items.map((item, i)=>(<li key={i} className="item"><ProgressBar percent={item.score} label={item.name} /></li>))}
+                                {skill.items.map((item, i)=>(
+                                    <li key={i} className="item">
+                                        <ProgressBar 
+                                            percent={item.score} 
+                                            label={item.name}
+                                            color={'default' === item.color ? 'chocolate' : item.color}
+                                        />
+                                    </li>
+                                ))}
                             </ul>
                         )}
                     </React.Fragment>

@@ -10,8 +10,9 @@ export default {
         {
             title:'Code Skills',
             items:[
-                {name:'H5/Css3', score:80, color:'default'},
-                {name:'Js/jQuery', score:80, color:'default'},
+                {name:'ReactJS', score:90, color:'red'},
+                {name:'H5/Css3', score:80, color:'yellow'},
+                {name:'Js/jQuery', score:80, color:'green'},
                 {name:'PHP', score:70, color:'default'},
             ]
         },
@@ -27,7 +28,7 @@ export default {
     cases: [
         {
             title: '京津冀一卡通助手',
-            cover: require('../static/img/yikatong-cover.jpg'),
+            cover: require('../static/img/abcd.jpg'),
             link: 'https://travelcard.chunni360.com/',
             target: '_blank',
         }

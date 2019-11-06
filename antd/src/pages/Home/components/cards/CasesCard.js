@@ -7,7 +7,8 @@ function CasesCard(props){
         <Card
             id="case-card"
             title="Cases"
-            isActive={props.isActive}
+            classes="cases-card"
+            isActive={isActive}
         >
             <ul className="list-view">
                 {cases.map(item => {
@@ -15,7 +16,7 @@ function CasesCard(props){
                         <li className="item">
                             <a href={item.link} target={item.target || '_self'}>
                                 <h2>{item.title}</h2>
-                                <img src={item.cover} alt={item.title} style={{width: '80%'}} />
+                                <img src={item.cover} alt={item.title} />
                             </a>
                         </li>
                     )

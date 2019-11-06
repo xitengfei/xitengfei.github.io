@@ -6,6 +6,7 @@ function ResumeCard(props){
         <Card
             id="resume-card"
             title="Resume"
+            classes="resume-card"
             isActive={props.isActive}
         >
             <div className="resume-buttons">

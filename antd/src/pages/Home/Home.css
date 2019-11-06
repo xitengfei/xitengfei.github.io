@@ -23,4 +23,18 @@
 .skill-list{margin-top:20px;}
 
 /*cases*/
-.case-card .list-view .item{border: 1px solid #ccc; padding: 20px;}
+#case-card .list-view .item{ border: 1px solid #ccc; padding: 8px; text-align: center; position: relative; }
+#case-card .list-view .item a{ text-decoration: none; }
+#case-card .list-view .item img{ width: 100%; }
+#case-card .list-view .item h2{
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    text-align: left;
+    color: #fff;
+    text-shadow: 0 1px rgba(0, 0, 0, .8);
+    font-size: 16px;
+    font-weight: bold;
+}
