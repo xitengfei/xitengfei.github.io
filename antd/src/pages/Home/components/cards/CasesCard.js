@@ -14,7 +14,8 @@ function CasesCard(props){
                     return (
                         <li className="item">
                             <a href={item.link} target={item.target || '_self'}>
-                                <img src={item.cover} alt={item.title} />
+                                <h2>{item.title}</h2>
+                                <img src={item.cover} alt={item.title} style={{width: '80%'}} />
                             </a>
                         </li>
                     )
