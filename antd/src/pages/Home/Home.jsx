@@ -1,13 +1,13 @@
 import React from 'react';
-import Menu from './components/Menu'
-import Tools from '@/tools/tools'
 
+import Menu from './components/Menu'
 import HomeCard from './components/cards/HomeCard'
 import ResumeCard from './components/cards/ResumeCard'
 import SkillsCard from './components/cards/SkillsCard'
 import CasesCard from './components/cards/CasesCard'
 import ContactCard from './components/cards/ContactCard'
 
+import Tools from '@/tools/tools'
 import './Home.css';
 import './Xui.css';
 
@@ -33,23 +33,25 @@ class Home extends React.Component {
     }
 
     render() {
-        let mainClass = (this.state.activePageHash === '' || this.state.activePageHash === "home") ? '' : 'wide-view'
+        const {menu, profile} = this.props;
+        const {activePageHash} = this.state;
+        let mainClass = (activePageHash === '' || activePageHash === "home") ? '' : 'wide-view'
         return (
             <div className="page-home">
                 <main className={mainClass}>
                     <div className="xui-container">
                         <Menu
-                            menus={this.props.menus}
+                            menus={menu.menus}
                             menuItemClick={this.menuItemClick}
                         ></Menu>
-                        <HomeCard isActive={"home-card" === this.state.activePageHash ? true : false} />
-                        <ResumeCard isActive={"resume-card" === this.state.activePageHash ? true : false} />
+                        <HomeCard isActive={"home-card" === activePageHash ? true : false} />
+                        <ResumeCard isActive={"resume-card" === activePageHash ? true : false} />
                         <SkillsCard
-                            isActive={"skills-card" === this.state.activePageHash ? true : false}
-                            skills={this.props.skills}
+                            isActive={"skills-card" === activePageHash ? true : false}
+                            skills={profile.skills}
                         />
-                        <CasesCard isActive={"case-card" === this.state.activePageHash ? true : false} />
-                        <ContactCard isActive={"contact-card" === this.state.activePageHash ? true : false} />
+                        <CasesCard isActive={"case-card" === activePageHash ? true : false} />
+                        <ContactCard isActive={"contact-card" === activePageHash ? true : false} />
                     </div>
                 </main>
             </div>

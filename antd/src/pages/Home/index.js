@@ -1,17 +1,13 @@
 import {connect} from 'react-redux'
 import Home from './Home'
 
-const mapStateToProps = (state, ownProps) => {
-    return {
-        menus: state.menuStore.menus,
-        skills: state.profileStore.skills
-    }
+const mapStateToProps = (state) => {
+    const {menu, profile} = state;
+    return {menu, profile};
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {}
 }
 
-const HomeContainer = connect(mapStateToProps, mapDispatchToProps)(Home)
-
-export default HomeContainer
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

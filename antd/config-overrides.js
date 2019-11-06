@@ -12,5 +12,8 @@ module.exports = function override(config, env) {
         config,
     );
     config.resolve.alias['@']= resolve('src');
+    config.resolve.alias['STORE']= resolve('src/redux/store');
+    config.resolve.alias['REDUCER']= resolve('src/redux/reducers');
+    config.resolve.alias['ACTIONS']= resolve('src/redux/actions');
     return config;
 };
