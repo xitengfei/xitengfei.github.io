@@ -1,7 +1,7 @@
 {
-  "main.css": "/static/css/main.65f9150b.chunk.css",
-  "main.js": "/static/js/main.29af8b96.chunk.js",
-  "main.js.map": "/static/js/main.29af8b96.chunk.js.map",
+  "main.css": "/static/css/main.b3320e57.chunk.css",
+  "main.js": "/static/js/main.848613bf.chunk.js",
+  "main.js.map": "/static/js/main.848613bf.chunk.js.map",
   "static/js/1.f7d34cb0.chunk.js": "/static/js/1.f7d34cb0.chunk.js",
   "static/js/1.f7d34cb0.chunk.js.map": "/static/js/1.f7d34cb0.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
@@ -9,9 +9,9 @@
   "static/media/me3.jpg": "/static/media/me3.3c429a3a.jpg",
   "static/media/Home.css": "/static/media/bg1.ef5740ee.jpg",
   "static/media/Xui.css": "/static/media/bg-card2.04d46ad5.png",
-  "static/media/yikatong-cover.jpg": "/static/media/yikatong-cover.e2b130ff.jpg",
-  "static/css/main.65f9150b.chunk.css.map": "/static/css/main.65f9150b.chunk.css.map",
+  "static/media/abcd.jpg": "/static/media/abcd.ee21b2be.jpg",
+  "static/css/main.b3320e57.chunk.css.map": "/static/css/main.b3320e57.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.d512723e5ac72d46b1f9853b7029604f.js": "/precache-manifest.d512723e5ac72d46b1f9853b7029604f.js",
+  "precache-manifest.60c20823be00a92fc269263c1f56339a.js": "/precache-manifest.60c20823be00a92fc269263c1f56339a.js",
   "service-worker.js": "/service-worker.js"
 }
