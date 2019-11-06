@@ -50,7 +50,10 @@ class Home extends React.Component {
                             isActive={"skills-card" === activePageHash ? true : false}
                             skills={profile.skills}
                         />
-                        <CasesCard isActive={"case-card" === activePageHash ? true : false} />
+                        <CasesCard 
+                            isActive={"case-card" === activePageHash ? true : false}
+                            cases={profile.cases}
+                        />
                         <ContactCard isActive={"contact-card" === activePageHash ? true : false} />
                     </div>
                 </main>

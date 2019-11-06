@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from './Card'
-import ProgressBar from '../widgets/ProgressBar'
+import ProgressBar from '@/components/widgets/ProgressBar'
 
 function SkillsCard({isActive, skills}){
     return (

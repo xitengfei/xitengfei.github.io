@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from './Card'
-import AMap from '../widgets/AMap' 
+import AMap from '@/components/widgets/AMap' 
 
 class ContactCard extends React.Component{
     render(){

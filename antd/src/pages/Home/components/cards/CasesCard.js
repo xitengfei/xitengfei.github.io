@@ -1,9 +1,8 @@
 import React from 'react'
 import Card from './Card'
-import case1 from '@/pages/Home/img/yikatong-cover.jpg'
-import { Link } from "react-router-dom"
 
 function CasesCard(props){
+    const {isActive, cases} = props;
     return (
         <Card
             id="case-card"
@@ -11,9 +10,15 @@ function CasesCard(props){
             isActive={props.isActive}
         >
             <ul className="list-view">
-                <li className="item">
-                    <Link to="/yikatong"><img src={case1} alt="case1" /></Link>
-                </li>
+                {cases.map(item => {
+                    return (
+                        <li className="item">
+                            <a href={item.link} target={item.target || '_self'}>
+                                <img src={item.cover} alt={item.title} />
+                            </a>
+                        </li>
+                    )
+                })}
             </ul>
         </Card>
     )

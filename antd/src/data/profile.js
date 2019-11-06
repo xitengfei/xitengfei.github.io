@@ -23,5 +23,13 @@ export default {
                 {name:'Git', score:80, color:'default'},
             ]
         },
+    ],
+    cases: [
+        {
+            title: '京津冀一卡通助手',
+            cover: require('../static/img/yikatong-cover.jpg'),
+            link: 'https://travelcard.chunni360.com/',
+            target: '_blank',
+        }
     ]
 }
