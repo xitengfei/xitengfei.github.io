@@ -1,8 +1,7 @@
 import genReducer from '@/utils/genReducer';
-import Home from './type';
 import {ACTION_HANDLERS} from './actions';
-import menu from '@/data/menu';
-import profile from '@/data/profile';
+import menu from '@/assets/data/menu';
+import profile from '@/assets/data/profile';
 
 const getInitState = function() {
     return {

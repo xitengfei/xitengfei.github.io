@@ -36,11 +36,12 @@
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -b master -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
+  "homepage": "https://xitengfei.github.io",
   "browserslist": {
     "production": [
       ">0.2%",

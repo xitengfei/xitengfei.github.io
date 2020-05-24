@@ -28,8 +28,8 @@ const profile = {
     cases: [
         {
             title: '京津冀一卡通助手',
-            cover: require('@/assets/img/abcd.jpg'),
-            link: 'https://travelcard.chunni360.com/',
+            cover: require('@/assets/img/abcd-12.jpg'),
+            link: 'https://yikatong.xitf.vip/',
             target: '_blank',
         }
     ]
