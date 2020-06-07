@@ -3,13 +3,13 @@ export default {
     title: '前端开发工程师',
     experience: '6年',
     avatar: require('@/pages/Resume/images/avatar1.jpg'),
-    breifDesc: `五年web前后端开发经验，精通ReactJs/es6，熟练掌握Html5/Css3响应式web开发，并能使⽤Gulp/Webpack
+    breifDesc: `六年web前后端开发经验，精通ReactJs/es6，熟练掌握Html5/Css3响应式web开发，并能使⽤Webpack/Gulp
     等⼯具进⾏前端构建。善于研究和探索，有较强解决问题的能⼒，对代码质量有较⾼的要求。`,
     metaInfo: [
-        {title: '电话', value:'15652203404'},
-        {title: '邮箱', value:'tengfei.xi@qq.com'},
-        {title: '地址', value:'北京·昌平'},
-        {title: '个人主页', value:'http://xitengfei.github.io'}
+        {title: '电话', value:'15652203404', icon: 'icon-telephone'},
+        {title: '邮箱', value:'tengfei.xi@qq.com', icon: 'icon-youxiang1'},
+        {title: '地址', value:'北京·昌平', icon: 'icon-location'},
+        {title: '个人主页', value:'http://xitengfei.github.io', icon: 'icon-github'}
     ],
     workExperience: [
         {
@@ -17,15 +17,16 @@ export default {
             name: '⽤友网络科技股份有限公司',
             role: '⾼级前端开发⼯程师',
             description: `
-                <h5>参与开发智能数据分析产品，⼯作内容: </h5>
+                <h5>开发智能分析产品，主要⼯作内容 </h5>
                 <ol>
-                    <li>根据业务开发功能模块</li>
-                    <li>根据需要开发UI组件</li>
-                    <li>优化/重构代码，增强项目的稳定性和可维护性</li>
-                    <li>主导功能推进，与后端开发对接</li>
+                    <li>根据业务需求开发核心功能模块</li>
+                    <li>解决项目中存在的各种问题，保障项目顺利上线</li>
+                    <li>整体把控产品质量，优化/重构代码，增强产品的稳定性和可维护性</li>
+                    <li>帮助团队中的前端伙伴，提供解决问题的思路</li>
+                    <li>协助架构师完成微前端微服务的拆分</li>
                 </ol>`,
             achievement: `
-            <p>这是⼀个⽐较⼤的报表分析类项目，在这个项目的开发中，每个⼈都有⾃⼰负责的功能模块，在这种情况下锻
+            <p>这是⼀个比较大的数据可视化产品，在这个项目的开发中，每个⼈都有⾃⼰负责的功能模块，在这种情况下锻
             炼了协同⼯作的能⼒。同时对于⽐较复杂的功能，先从架构的⾓度进⾏设计，然后再代码实现。在⼯作中不断
             尝试新的技能，提⾼了开发的效率, ⽐如对react⾼阶组件的运⽤，对es6各种新特性的运⽤。</p>
             `,
@@ -59,17 +60,9 @@ React, Angular以及Sass, canvas, svg等, 后端⽅⾯有Wordpress, Laravel, GoL
             name: '莱客创新（北京）科技有限公司',
             role: 'PHP工程师/组长',
             description: `
-            工作内容
-            > 使用Yii框架开发项目管理后台与客户端API
-            
-            * 负责APP接口和后台管理系统的开发，数据库设计
-            * 电子商务网站前后台开发
-            * 开发爬虫进行数据抓取
-            * 开发中用到了Mongodb，Memcache，队列，定时任务等技术
-            `,
-            achievement: `
-            在该公司期间，使⽤Yii框架进⾏php后端开发，负责后台管理系统，数据抓取，移动端的API等开发⼯作。
-            `,
+            <p>在该公司期间，担任后端开发工程师，使用PHP的Yii框架，主要负责移动端API和后台管理系统的开发，
+            数据库设计等⼯作，另外还有开发爬虫进行数据抓取，在开发过程中还用到了Mongodb，Memcache，队列，定时任务等技术
+            </p>`,
         },
     ],
     projectExperience: [
@@ -86,16 +79,45 @@ React, Angular以及Sass, canvas, svg等, 后端⽅⾯有Wordpress, Laravel, GoL
             `,
         },
         {
-            name: '⽤友云智能分析项目',
-            company: '用友网络科技股份有限公司',
-            role: '⾼级前端⼯程师',
-            period: '2018.12 — 今',
+            name: 'Intranet',
+            company: '北京华美汉盛信息技术有限公司',
+            role: '前后端⼯程师',
+            period: '2018.08 - 2018.12',
             description: `
             Intranet是客户公司内部使⽤的项目, 有数据表格, 账单审批, 还有⼀些业务上的辅助功能. 技术栈上后端是Go语⾔, 
 前端是React全家桶配合Ant Design和TypeScript , 同时还对接了Google, AWS等第三⽅服务, 包括Google联合登
 陆, Gmail发送邮件, AWS S3服务等. 接⼿这个项目的时候还没有Go语⾔的相关经验, ⼀边学习的同时⼀边做新的功
 能和修复Bug, 同时将⾃⼰的React技能运⽤到了项目中。 
             `,
+        },
+        {
+            name: 'Meme Generator',
+            company: '北京华美汉盛信息技术有限公司',
+            role: '前后端⼯程师',
+            period: '2017.06 — 2017.06',
+            description: `这是⼀个利⽤canvas技术做的在线合成图⽚的应⽤，⽤户可以上传的⾃⼰的图⽚, 然后放⼤缩⼩或拖动，输⼊⾃定
+            义⽂字并改变⽂字样式，然后点击按钮将合成的图⽚分享到Facebook和Twitter，也可以直接在线下载。为减轻服
+            务器的压⼒，全部功能都是纯粹在浏览器端完成的，为实现分享功能, 图⽚也是直接从浏览器端先上传到S3存储服务
+            上，并对所有的JS和CSS代码使⽤前端构建⼯具gulp进⾏了合并和压缩。`,
+        },
+        {
+            name: 'Sound Cloud ⾳乐播放器',
+            company: '北京华美汉盛信息技术有限公司',
+            role: '前后端⼯程师',
+            period: '2016.04 — 2016.04',
+            description: `开发⼀个基于Sound Cloud Javascript API的⾳乐播放器插件，要安装在客户所有的Festival站点上，并且需要实
+            现切换⻚⾯时⾳乐播放不被打断的效果。解决⽅案是对全站开启了Ajax模式，从⽽实现切换⻚⾯⾳乐播放不暂停。
+            由于Ajax模式的开启产⽣了很多问题， 然后将相关的⼀问题逐个进⾏了修复。今年⼜对代码进⾏了重构，借鉴了
+            Angular的思想将js代码模块化，优化过后的代码结构更加清晰，也易于扩展和维护。`,
+        },
+    ],
+    education: [
+        {
+            name: '许昌学院',
+            company: '计算机科学与技术系',
+            role: '计算机科学与技术系 -- 本科',
+            period: '2010.09 — 2014.07',
+            description: '',
         },
     ],
     icomments: [

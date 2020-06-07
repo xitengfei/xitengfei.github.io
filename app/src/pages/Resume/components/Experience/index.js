@@ -20,10 +20,10 @@ const ExperienceItem = function(props){
                             <h3>工作内容</h3>
                             <div className="detail" dangerouslySetInnerHTML={{__html: description}}></div>
                         </div>
-                        <div className="experience-achievement">
+                        {achievement && (<div className="experience-achievement">
                             <h3>工作成果</h3>
                             <div className="detail" dangerouslySetInnerHTML={{__html: achievement}}></div>
-                        </div>
+                        </div>)}
                     </React.Fragment>
                 )}
             </div>

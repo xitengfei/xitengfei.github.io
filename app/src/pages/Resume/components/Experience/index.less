@@ -1,6 +1,10 @@
 .experience-item{
-    margin-bottom: 16px;
+    margin-bottom: 24px;
     
+    &:last-child{
+        margin-bottom: 0;
+    }
+
     .meta{
         display: flex;
         height: 24px;
@@ -9,6 +13,7 @@
 
         .name{
             flex: 1 0 25%;
+            font-weight: bold;
         }
         .period{
             flex: 1 0 20%;
@@ -35,6 +40,9 @@
             font-weight: bold;
             line-height: 24px;
             margin-bottom: 8px;
+            color: #999;
+            border-left: 3px solid #ccc;
+            padding-left: 8px;
         }
     }
 }

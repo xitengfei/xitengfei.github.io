@@ -15,6 +15,7 @@ class Resume extends React.Component{
                     <Section 
                         icon={<img src={require('./images/001.png')} alt="person" />}
                         title={'自我简介'}
+                        className="breif-desc"
                     >
                         <p>
                         {Data.breifDesc}
@@ -27,7 +28,14 @@ class Resume extends React.Component{
                         <Experience dataSource={Data.workExperience} mode={'complex'} />
                     </Section>
                     <Section
-                        icon={<img src={require('./images/002.png')} alt="experience" />}
+                        icon={<img src={require('./images/003.png')} alt="experience" />}
+                        title={'教育背景'}
+                        className='education'
+                    >
+                        <Experience dataSource={Data.education} mode={'simple'} />
+                    </Section>
+                    <Section
+                        icon={<img src={require('./images/004.png')} alt="experience" />}
                         title={'项目经验'}
                     >
                         <Experience dataSource={Data.projectExperience} />
@@ -35,6 +43,7 @@ class Resume extends React.Component{
                     <Section
                         icon={<img src={require('./images/005.png')} alt="experience" />}
                         title={'⾃我评价'}
+                        className='icomments'
                     >
                         <ol>
                             {

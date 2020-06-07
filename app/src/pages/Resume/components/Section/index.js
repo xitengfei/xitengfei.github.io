@@ -2,10 +2,10 @@ import React from 'react';
 import './index.less';
 
 const Section = function(props){
-    const {icon, title} = props;
+    const {icon, title, className} = props;
     
     return(
-        <section className="resume-section">
+        <section className={`resume-section ${className}`}>
             <div className="section-header">
                 <h2>
                     <span className="icon">{icon}</span>

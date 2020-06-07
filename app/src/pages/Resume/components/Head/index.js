@@ -21,7 +21,7 @@ const Head = function(){
                     {metaInfo.map(item => {
                         return (
                             <li key={item.title}>
-                                <i className="" title={item.title}></i>
+                                <i className={`iconfont ${item.icon}`} title={item.title}></i>
                                 <span className="value">{item.value}</span>
                             </li>
                         )
