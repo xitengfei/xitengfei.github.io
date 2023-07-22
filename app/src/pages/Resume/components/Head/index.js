@@ -7,7 +7,7 @@ const Head = function(){
     const {metaInfo} = data;
 
     return(
-        <header className="resume-header">
+        <header className="resume-header" style={{backgroundColor: '#343A4B'}}>
             <div className="avatar">
                 <img src={data.avatar} alt="avatar" />
             </div>
